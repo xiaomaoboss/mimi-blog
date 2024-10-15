@@ -23,13 +23,15 @@
 <meta property="og:site_name" content="Mimiboss">
 <meta property="og:description" content="1. 对角线遍历 数组 + 模拟  处理好边界即可。  定义一个 flag 变量，表示向上（true）还是向下（false）。   遍历时只关注是否到达边界，到达边界则做 i 和 j 的改变，否则（向上时i--  j++；向下时j++ i--）。 向上时的边界条件i - 1 &lt; 0 || j + 1 &lt; mat[0].length。     到达边界时就i++，这里也要分情况如果 i+">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xiaomaoboss.github.io/image/2024-10-15/20241015204708.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/20241015204708.png">
 <meta property="article:published_time" content="2024-10-15T09:33:55.284Z">
-<meta property="article:modified_time" content="2024-10-15T12:50:07.327Z">
+<meta property="article:modified_time" content="2024-10-15T12:59:57.555Z">
 <meta property="article:author" content="Mimiboss">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiaomaoboss.github.io/image/2024-10-15/20241015204708.png">
+<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/20241015204708.png">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>Mimiboss</title>
@@ -278,6 +280,14 @@
 
     
     
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
   </div>
 
 
@@ -309,6 +319,14 @@
         <div id="board">
           <article class="post-content mx-auto">
             <h1 id="seo-header"></h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：12 分钟前
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
@@ -344,7 +362,7 @@
 </ol>
 </li>
 </ol>
-<p><img src="/mimi-blog/../image/2024-10-15/20241015204708.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="img"></p>
+<p><img src="/mimi-blog/image/20241015204708.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="20241015204708"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span>[] findDiagonalOrder(<span class="hljs-type">int</span>[][] mat) &#123;<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">flag</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-type">int</span>[] res = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[mat.length * mat[<span class="hljs-number">0</span>].length];<br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>, index = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (i != mat.length - <span class="hljs-number">1</span> || j != mat[<span class="hljs-number">0</span>].length - <span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-keyword">if</span> (!flag) &#123;<br>                <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>                    res[index++] = mat[i][j];<br>                    <span class="hljs-keyword">if</span> (i - <span class="hljs-number">1</span> &lt; <span class="hljs-number">0</span> || j + <span class="hljs-number">1</span> &gt;= mat[<span class="hljs-number">0</span>].length) &#123;<br>                        <span class="hljs-keyword">break</span>;<br>                    &#125;<br>                    i--;<br>                    j++;<br>                &#125;<br>                <span class="hljs-keyword">if</span> (j + <span class="hljs-number">1</span> &lt; mat[<span class="hljs-number">0</span>].length) &#123;<br>                    j++;<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    i++;<br>                &#125;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;<br>                    res[index++] = mat[i][j];<br>                    <span class="hljs-keyword">if</span> (i + <span class="hljs-number">1</span> &gt;= mat.length || j - <span class="hljs-number">1</span> &lt; <span class="hljs-number">0</span>) &#123;<br>                        <span class="hljs-keyword">break</span>;<br>                    &#125;<br>                    i++;<br>                    j--;<br>                &#125;<br>                <span class="hljs-keyword">if</span> (i + <span class="hljs-number">1</span> &lt; mat.length) &#123;<br>                    i++;<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    j++;<br>                &#125;<br>            &#125;<br>            flag = !flag;<br>        &#125;<br>        res[index] = mat[mat.length - <span class="hljs-number">1</span>][mat[<span class="hljs-number">0</span>].length - <span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
@@ -379,6 +397,11 @@
           <div>2024年10月15日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年10月15日</div>
+        </div>
       
       
         <div class="license-meta-item">
@@ -424,6 +447,34 @@
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script type="text/javascript">
+        var disqus_config = function() {
+          this.page.url = 'https://xiaomaoboss.github.io/mimi-blog/2024/10/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/';
+          this.page.identifier = '/mimi-blog/2024/10/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/';
+        };
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//' + 'fluid' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>
@@ -471,6 +522,21 @@
 
   
 
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
 
 
 
@@ -665,6 +731,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/mimi-blog/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
