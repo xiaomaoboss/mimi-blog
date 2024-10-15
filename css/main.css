@@ -2173,3 +2173,11 @@ input[type=checkbox] {
     margin-left: 1rem;
   }
 }
+#particles-js {
+  position: absolute; /* 绝对定位 */
+  top: 0; /* 从页面顶部开始 */
+  left: 0; /* 从页面左侧开始 */
+  width: 100%; /* 宽度为100% */
+  height: 100%; /* 高度为100% */
+  z-index: -1; /* 确保粒子在其他内容后面 */
+}
