@@ -23,62 +23,62 @@
 <meta property="og:site_name" content="Mimiboss">
 <meta property="og:description" content="JVM 的整体结构JVM 参数文档：https:&#x2F;&#x2F;docs.oracle.com&#x2F;en&#x2F;java&#x2F;javase&#x2F;11&#x2F;tools&#x2F;java.html#GUID-3B1CE181-CD30-4178-9602-230B800D4FAE  HotSpot VM 是高性能虚拟机的代表作之一，采用解释器与即时编译并存的架构。   执行引擎包含三部分：&lt;font style&#x3D;&quot;color:">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725171839512-9dc844f4-84ea-4e7e-8c23-7c0d88b9428b.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725172491547-5345e450-bf53-429d-b0e1-017475f6242b.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725176644428-ba84bc91-79ef-4f9b-8e2a-81bcdfedf7d1.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725177136892-95e12f18-da16-4361-8c06-9d21603878a9.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725178945821-7a864529-db11-4f62-b68c-041f06b83395.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725180293972-48d4076b-28f7-43f5-84c0-ee7b3ef6d98e.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725184819263-d25af38b-7638-4a3f-8bf3-db5460a1f661.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725185662452-4d61ac0d-f610-4053-b34f-391e15d07ff4.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725270236869-4dece1de-4e63-44d0-a769-880a4c3c9c05.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725271414659-7fdf41b5-65ad-47d2-bf50-6a83b1a5eee5.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725275815444-223e127d-bceb-47c4-bcf7-60214c9612e7.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725277088332-4b3c4875-c38d-4f83-b0a2-c9c1ed65d116.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725279071000-2bc0d2e0-64c0-4b30-986d-10cb28b8f7b7.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725280006681-558cd41c-c8d1-4e1f-9b4d-7c67e9d359cc.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725280184367-c623fb7f-488e-421c-8a12-86f2d2f912c2.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725281816847-1a4f7ccf-a0e1-4a85-8c64-11d6f609db25.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725328643768-8c91bbd1-e859-4271-9da8-05fb352afbc9.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725328282818-7b050e5f-c0ba-4148-9f9a-20fe40b32923.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725171839512-9dc844f4-84ea-4e7e-8c23-7c0d88b9428b.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725172491547-5345e450-bf53-429d-b0e1-017475f6242b.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725176644428-ba84bc91-79ef-4f9b-8e2a-81bcdfedf7d1.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725177136892-95e12f18-da16-4361-8c06-9d21603878a9.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725178945821-7a864529-db11-4f62-b68c-041f06b83395.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725180293972-48d4076b-28f7-43f5-84c0-ee7b3ef6d98e.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725184819263-d25af38b-7638-4a3f-8bf3-db5460a1f661.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725185662452-4d61ac0d-f610-4053-b34f-391e15d07ff4.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725270236869-4dece1de-4e63-44d0-a769-880a4c3c9c05.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725271414659-7fdf41b5-65ad-47d2-bf50-6a83b1a5eee5.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725275815444-223e127d-bceb-47c4-bcf7-60214c9612e7.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725277088332-4b3c4875-c38d-4f83-b0a2-c9c1ed65d116.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725279071000-2bc0d2e0-64c0-4b30-986d-10cb28b8f7b7.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725280006681-558cd41c-c8d1-4e1f-9b4d-7c67e9d359cc.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725280184367-c623fb7f-488e-421c-8a12-86f2d2f912c2.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725281816847-1a4f7ccf-a0e1-4a85-8c64-11d6f609db25.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725328643768-8c91bbd1-e859-4271-9da8-05fb352afbc9.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725328282818-7b050e5f-c0ba-4148-9f9a-20fe40b32923.png">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725331956027-f249fde7-f0f4-438c-9253-3d86bce53d99.png">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725332805328-2e0c8ba1-ea93-467a-927e-684ad520cd64.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725334820913-fde1c786-a3c6-4563-aa01-1ee0d3112bc9.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725338928024-fd1d4409-be53-43df-9eea-a6e9459fc26f.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725342889575-d53d3591-601c-4ec9-b37b-9f87132323ea.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725344854562-6ddf17e1-3c4c-4b3c-88ac-64739ea87e22.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725438672122-6b623eae-bd9c-4fb4-b1bb-ef0308dfd433.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725439939768-bcf613aa-faad-439f-bac4-382a1a0c4576.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725442161225-a2f786ba-c18b-4648-9cff-7477c3e809df.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/jpeg/45356455/1727658212370-ffbb52af-a23d-472a-8383-845b74d813cb.jpeg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725445415991-b55aadde-26f9-4071-a9ff-ca916b57b370.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725447177380-79ab28c4-23ac-4e97-9db4-70658d6415a6.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725448099238-aebc2d51-617e-4082-9b7a-c65ff56c476c.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725517999296-bd57dd0b-98a4-40ea-81f0-b964e4f98a4a.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725519856319-345e2bf0-f1ac-4eae-8920-75723827a76a.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725526453830-63ae2e4c-65fc-42a2-9122-ed4eefe45a0f.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725527086714-abd630d2-0c22-467a-8d05-4ee70ebc1281.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725534928065-72c25e0b-c224-4f8d-af3b-df7b1fe2eadd.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725535485284-5d0415ad-1a9f-4aca-9d1b-8e7646af5621.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725536355847-c040c0ca-bb0e-47f0-97f7-d539f4f8ed43.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725601736713-889f94d0-6c21-4100-9af9-5546bc497a77.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725602963362-954060df-8769-43d5-bc21-6e27e90b3ff9.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725609662187-4e03da08-6e48-482a-90f2-fbefc624a704.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725610783248-d274b01c-56f9-4bb0-9a8d-7bd9a95d4e90.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725610752956-7e842a69-7029-4042-8fe7-7437ffb06523.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725612030429-0c65b7a8-6c92-4a1a-a14a-cae920f692cc.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725616981969-ff48f345-3905-40b6-8fcf-70fc8414aae6.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725622765243-cd307670-119a-4541-929a-43d088196f35.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725625107989-8b5ce144-f175-4d36-85f7-7f95df3182ba.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725334820913-fde1c786-a3c6-4563-aa01-1ee0d3112bc9.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725338928024-fd1d4409-be53-43df-9eea-a6e9459fc26f.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725342889575-d53d3591-601c-4ec9-b37b-9f87132323ea.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725344854562-6ddf17e1-3c4c-4b3c-88ac-64739ea87e22.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725438672122-6b623eae-bd9c-4fb4-b1bb-ef0308dfd433.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725439939768-bcf613aa-faad-439f-bac4-382a1a0c4576.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725442161225-a2f786ba-c18b-4648-9cff-7477c3e809df.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1727658212370-ffbb52af-a23d-472a-8383-845b74d813cb.jpeg">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725445415991-b55aadde-26f9-4071-a9ff-ca916b57b370.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725447177380-79ab28c4-23ac-4e97-9db4-70658d6415a6.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725448099238-aebc2d51-617e-4082-9b7a-c65ff56c476c.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725517999296-bd57dd0b-98a4-40ea-81f0-b964e4f98a4a.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725519856319-345e2bf0-f1ac-4eae-8920-75723827a76a.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725526453830-63ae2e4c-65fc-42a2-9122-ed4eefe45a0f.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725527086714-abd630d2-0c22-467a-8d05-4ee70ebc1281.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725534928065-72c25e0b-c224-4f8d-af3b-df7b1fe2eadd.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725535485284-5d0415ad-1a9f-4aca-9d1b-8e7646af5621.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725536355847-c040c0ca-bb0e-47f0-97f7-d539f4f8ed43.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725601736713-889f94d0-6c21-4100-9af9-5546bc497a77.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725602963362-954060df-8769-43d5-bc21-6e27e90b3ff9.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725609662187-4e03da08-6e48-482a-90f2-fbefc624a704.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725610783248-d274b01c-56f9-4bb0-9a8d-7bd9a95d4e90.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725610752956-7e842a69-7029-4042-8fe7-7437ffb06523.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725612030429-0c65b7a8-6c92-4a1a-a14a-cae920f692cc.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725616981969-ff48f345-3905-40b6-8fcf-70fc8414aae6.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725622765243-cd307670-119a-4541-929a-43d088196f35.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725625107989-8b5ce144-f175-4d36-85f7-7f95df3182ba.png">
 <meta property="article:published_time" content="2024-10-16T07:42:21.000Z">
-<meta property="article:modified_time" content="2024-10-16T07:43:34.942Z">
+<meta property="article:modified_time" content="2024-10-16T07:49:31.143Z">
 <meta property="article:author" content="Mimiboss">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="知识库">
 <meta property="article:tag" content="Java高级">
 <meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725171839512-9dc844f4-84ea-4e7e-8c23-7c0d88b9428b.png">
+<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1725171839512-9dc844f4-84ea-4e7e-8c23-7c0d88b9428b.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -391,8 +391,8 @@
 <li><font style="color:rgba(0, 0, 0, 0.75);">执行引擎包含三部分：</font><code>&lt;font style=&quot;color:#ED740C;background-color:rgb(249, 242, 244);&quot;&gt;解释器&lt;/font&gt;</code><font style="color:rgba(0, 0, 0, 0.75);">，</font><code>&lt;font style=&quot;color:#ED740C;background-color:rgb(249, 242, 244);&quot;&gt;即时编译器&lt;/font&gt;</code><font style="color:rgba(0, 0, 0, 0.75);">，</font><code>&lt;font style=&quot;color:#ED740C;background-color:rgb(249, 242, 244);&quot;&gt;垃圾回收器&lt;/font&gt;</code>。</li>
 <li>操作系统只可以识别机器指令，执行引擎充当了高级语言到机器语言的翻译者这样的角色。</li>
 </ul>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725171839512-9dc844f4-84ea-4e7e-8c23-7c0d88b9428b.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
-<h2 id="Java-代码的执行流程"><a href="#Java-代码的执行流程" class="headerlink" title="Java 代码的执行流程"></a>Java 代码的执行流程</h2><p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725172491547-5345e450-bf53-429d-b0e1-017475f6242b.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725171839512-9dc844f4-84ea-4e7e-8c23-7c0d88b9428b.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<h2 id="Java-代码的执行流程"><a href="#Java-代码的执行流程" class="headerlink" title="Java 代码的执行流程"></a>Java 代码的执行流程</h2><p><img src="/mimi-blog/image/1725172491547-5345e450-bf53-429d-b0e1-017475f6242b.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="JVM-架构模型"><a href="#JVM-架构模型" class="headerlink" title="JVM 架构模型"></a>JVM 架构模型</h2><ol>
 <li>Java 编译器输入的指令基本上基于<code>&lt;font style=&quot;color:#ECAA04;&quot;&gt;栈的指令级架构&lt;/font&gt;</code>，另外一种指令集架构则是基于<code>&lt;font style=&quot;color:#ECAA04;&quot;&gt;寄存器的指令集架构&lt;/font&gt;</code>。</li>
 <li>基于栈式架构的特点：<ol>
@@ -475,7 +475,7 @@
 </li>
 <li>Azul VM。</li>
 </ol>
-<h1 id="JVM-内存结构"><a href="#JVM-内存结构" class="headerlink" title="JVM 内存结构"></a>JVM 内存结构</h1><p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725176644428-ba84bc91-79ef-4f9b-8e2a-81bcdfedf7d1.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<h1 id="JVM-内存结构"><a href="#JVM-内存结构" class="headerlink" title="JVM 内存结构"></a>JVM 内存结构</h1><p><img src="/mimi-blog/image/1725176644428-ba84bc91-79ef-4f9b-8e2a-81bcdfedf7d1.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h1 id="类加载器子系统"><a href="#类加载器子系统" class="headerlink" title="类加载器子系统"></a>类加载器子系统</h1><ol>
 <li>类加载子系统复杂从文件系统或者网络中加载 class 文件，class 文件在文件开头有特定的文件标识。</li>
 <li>ClassLoader 只负责 class 文件的加载，至于它是否可以运行，则由 ExecutionEngine 决定。<ol>
@@ -484,7 +484,7 @@
 </li>
 <li>加载的类信息存放于一块成为方法区的内存空间，除了类的信息外，方法去中还会存放运行时常量池信息，可能还包括字符串字面量和数字常量（这部分常量信息是 Class 文件中常量池部分的内存映射）。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725177136892-95e12f18-da16-4361-8c06-9d21603878a9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725177136892-95e12f18-da16-4361-8c06-9d21603878a9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="4">
 <li>类的加载过程：<ol>
 <li>通过一个类的全限定名称，获取定义类的二进制字节流。</li>
@@ -526,7 +526,7 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725178945821-7a864529-db11-4f62-b68c-041f06b83395.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725178945821-7a864529-db11-4f62-b68c-041f06b83395.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <pre><code class="hljs">2. 按照 class 文件的上下顺序覆盖的值。
     1. 以下代码 NUMBER 的初始化顺序为：NUMBER -&gt; 0 -&gt; 20 -&gt; 10;
 </code></pre>
@@ -546,7 +546,7 @@
 <li>String 类是由<code>Bootstrap Class Loader</code>加载器加载的，自定义类的类加载器是由<code>System Class Loader</code>加载的。</li>
 <li>其中 Bootstrap Class Loader 加载器是获取不到的，其他的加载器可以通过<code>.parent()</code>的形式获取到。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725180293972-48d4076b-28f7-43f5-84c0-ee7b3ef6d98e.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725180293972-48d4076b-28f7-43f5-84c0-ee7b3ef6d98e.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="Bootstrap-Class-Loader"><a href="#Bootstrap-Class-Loader" class="headerlink" title="Bootstrap Class Loader"></a>Bootstrap Class Loader</h3><ol>
 <li>使用<code>C/C++实现</code>，嵌套在 JVM 内部。</li>
 <li>用来加载 Java 的核心库（Java home ‘&#x2F;jre&#x2F;lib&#x2F;rt.jar’）。resources.jar 或者 sun.boot.class.path 路径下的内容，用于提供 JVM 自身需要的类。</li>
@@ -586,7 +586,7 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725184819263-d25af38b-7638-4a3f-8bf3-db5460a1f661.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725184819263-d25af38b-7638-4a3f-8bf3-db5460a1f661.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="沙箱安全机制"><a href="#沙箱安全机制" class="headerlink" title="沙箱安全机制"></a>沙箱安全机制</h2><ol>
 <li>BootstrapClassLoader 加载 java&#x2F;javax 开头的限定类，当外界试图创建一个以这些限定类开头的包达到让BootstrapClassLoader 加载来破坏核心 API 的目的，这种情况是不可能的，也是不允许发生的，当我们在 java.lang 包下创建一个自己类，就会出现<code>&lt;font style=&quot;color:#DF2A3F;&quot;&gt;java.lang.SecurityException: Prohibited package name: java.lang&lt;/font&gt;</code><font style="color:#000000;">的一个错误信息。这样就是沙箱安全机制。</font></li>
 </ol>
@@ -596,7 +596,7 @@
 <li>其中<font style="color:#ED740C;">方法区、堆</font>是一个进程中一份，<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;程序计数器、本地方法栈、虚拟机栈&lt;/font&gt;</code>是一个线程一份。</li>
 <li>每一个 Java 应用程序存在一个 Runtime 实例，用于接口环境之间的交互操作，可以通过 getRuntime()方法获取。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725185662452-4d61ac0d-f610-4053-b34f-391e15d07ff4.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725185662452-4d61ac0d-f610-4053-b34f-391e15d07ff4.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><ol>
 <li>线程中是应用程序的运行单元，JVM 支持多线程并行执行。在 HotSpot JVM 中每个线程都与操作系统的本地线程直接映射。</li>
 <li>当一个 Java 线程准备好执行时，本地线程也就创建了，当 Java 线程结束时，本地线程也就结束了。</li>
@@ -616,7 +616,7 @@
 <h2 id="PC-寄存器"><a href="#PC-寄存器" class="headerlink" title="PC 寄存器"></a>PC 寄存器</h2><ol>
 <li>程序寄存器用来存储指令指向下一条指令的地址，也即将要执行的指令代码。由执行引擎读取下一条指令。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725270236869-4dece1de-4e63-44d0-a769-880a4c3c9c05.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725270236869-4dece1de-4e63-44d0-a769-880a4c3c9c05.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="2">
 <li>PC 计数器是一块儿很小的内存空间，几乎可以忽略不计，运行速度最快的存储区域。</li>
 <li>每个线程都有自己的程序计数器，是线程私有的，生命周期于线程的生命周期保持一致。</li>
@@ -630,7 +630,7 @@
 <li>当执行了一次 <code>i = 10; j = 20; k = i + j;</code>这样的操作时字节码文件就如下面所示，其中 PC 寄存器做的事情就是记录当前程序执行的位置。</li>
 <li>PC 寄存器记录指令的执行位置是为了在发生线程切换时，记录当前线程执行的情况，以免后续线程再次切换回来时指令的错误执行问题。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725271414659-7fdf41b5-65ad-47d2-bf50-6a83b1a5eee5.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725271414659-7fdf41b5-65ad-47d2-bf50-6a83b1a5eee5.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="5">
 <li>PC 寄存器在每个线程中又有一份而且是私有的，这是每个线程都有自己对这段代码的执行情况，所以需要记录在自己的线程栈信息中，如果是共享的那就乱套了。</li>
 </ol>
@@ -654,7 +654,7 @@
 <li>栈是存在 OOM 的，就比如子弹夹总有满的时候。</li>
 <li><code>-Xss</code>设置 JVM 运行时栈的大小，<code>-Xss256k</code>结果打印的 count&#x3D;2453。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725275815444-223e127d-bceb-47c4-bcf7-60214c9612e7.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725275815444-223e127d-bceb-47c4-bcf7-60214c9612e7.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="6">
 <li>每个线程都有自己的栈，栈中数据都是以栈帧（Stack Frame）的格式存在的。执行的每个方法都对应了一个栈帧（Stack Frame）。站真是一个内存区域，是一个数据集，维系着方法执行过程中的各种数据信息。</li>
 </ol>
@@ -665,22 +665,22 @@
 <li>方法返回地址（Return Address）（方法正常退出或者异常退出的定义）。</li>
 <li>一些附加信息。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725277088332-4b3c4875-c38d-4f83-b0a2-c9c1ed65d116.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725277088332-4b3c4875-c38d-4f83-b0a2-c9c1ed65d116.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="局部变量表"><a href="#局部变量表" class="headerlink" title="局部变量表"></a>局部变量表</h3><ol>
 <li>局部变量表是一个<code>数字数组</code>，用于存储方法参数和定义在方法体内的局部变量，这些数据类型包括<code>基本类型</code>、<code>对象引用</code>以及<code>return Address</code>类型。</li>
 <li>其中本地变量表情况中的 length 指的是，从起始 PC 开始的 length 行内有效。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725279071000-2bc0d2e0-64c0-4b30-986d-10cb28b8f7b7.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725279071000-2bc0d2e0-64c0-4b30-986d-10cb28b8f7b7.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="3">
 <li>JVM 会为局部变量表中的每一个 slot 分配一个访问索引，通过这个索引即可成功访问到局部变量表中指定的局部变量值。</li>
 <li>如果需要访问局部变量中一个 64bit 的变量时，只需要访问第一个 slot 即可（long、double）。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725280006681-558cd41c-c8d1-4e1f-9b4d-7c67e9d359cc.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725280006681-558cd41c-c8d1-4e1f-9b4d-7c67e9d359cc.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="5">
 <li>如果是实例方法局部变量表中会自动添加一个 this 变量，在 static 中的变量表中没有 this 变量所以 static 中不可以使用 this 关键字。</li>
 <li>索引的重复利用机制：当一个代码块内声明的局部变量消失后，后续变量将占用它的 slot，这里变量 b 在 if 中声明，逃出 if 后就不起作用了，所以 变量 c 也站在了索引为 2 的表格中。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725280184367-c623fb7f-488e-421c-8a12-86f2d2f912c2.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725280184367-c623fb7f-488e-421c-8a12-86f2d2f912c2.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="7">
 <li>变量的分类：在使用前都会被默认赋值。<ol>
 <li>数据类型（基本、引用）</li>
@@ -699,7 +699,7 @@
 <li>栈可以通过数组和链表来进行设计，只要遵循 FILO 特性即可。</li>
 <li>在方法执行过程中，根据字节码指令，往栈中写入数据或者提取数据，即入栈和出栈。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725281816847-1a4f7ccf-a0e1-4a85-8c64-11d6f609db25.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725281816847-1a4f7ccf-a0e1-4a85-8c64-11d6f609db25.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="栈顶缓存技术"><a href="#栈顶缓存技术" class="headerlink" title="栈顶缓存技术"></a>栈顶缓存技术</h3><ol>
 <li>栈式结构，指令集小但是指令会很多，因为是基于栈的架构，所以栈的指令是较多的。</li>
 <li>将栈顶元素全部缓存到 CPU 的寄存器中，依次降低对内存的读写次数，提升执行引擎的执行效率。</li>
@@ -714,7 +714,7 @@
 <li>存放调用该方法的 PC 寄存器的值。</li>
 <li>方法返回地址 PC 寄存器用于记录当出现方法调用时，PC 寄存器就会记录该方法正常退出的下一条指令的地址。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725328643768-8c91bbd1-e859-4271-9da8-05fb352afbc9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725328643768-8c91bbd1-e859-4271-9da8-05fb352afbc9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="3">
 <li>方法返回具体需要哪一个返回指令，这是根据方法返回值类型来定的。<ol>
 <li>ireturn：boolean、byte、char、short、int。</li>
@@ -757,7 +757,7 @@
 <li>每个类都有一个虚方法表，表格中存放着各个方法的实际入口。</li>
 <li>虚方法表会在类加载的<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;链接阶段创建并开始初始化&lt;/font&gt;</code>，类的变量初始值准备完成之后，JVM 会把该类的方法表页初始化完毕。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725328282818-7b050e5f-c0ba-4148-9f9a-20fe40b32923.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725328282818-7b050e5f-c0ba-4148-9f9a-20fe40b32923.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a>本地方法栈</h2><ol>
 <li>本地方法栈用于管理本地方法的调用。</li>
 <li>本地方法是私有的，也是线程私有的。</li>
@@ -810,11 +810,11 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725334820913-fde1c786-a3c6-4563-aa01-1ee0d3112bc9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725334820913-fde1c786-a3c6-4563-aa01-1ee0d3112bc9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="OOM"><a href="#OOM" class="headerlink" title="OOM"></a>OOM</h3><ol>
 <li>当 Old 和 Eden 满时，就会出现 OOM Error。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725338928024-fd1d4409-be53-43df-9eea-a6e9459fc26f.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725338928024-fd1d4409-be53-43df-9eea-a6e9459fc26f.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="比例设定"><a href="#比例设定" class="headerlink" title="比例设定"></a>比例设定</h3><ol>
 <li><code>&lt;font style=&quot;color:#ED740C;&quot;&gt;-XX:NewRatio&lt;/font&gt;</code>设置<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;新生代&lt;/font&gt;</code>与<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;老年代&lt;/font&gt;</code>的比例，默认值是 2。</li>
 <li><code>&lt;font style=&quot;color:#ED740C;&quot;&gt;-XX:SurvivorRatio&lt;/font&gt;</code>设置<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;新生代&lt;/font&gt;</code>中<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;Eden&lt;/font&gt;</code>区与<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;Survivor&lt;/font&gt;</code>区的比例。<ol>
@@ -830,14 +830,14 @@
 <li>From-To 的角色交换就是<font style="color:#ED740C;">复制算法</font>，避免对象碎片化。</li>
 <li>关于垃圾回收：<font style="color:#ED740C;">频繁收集新生代，很少在老年代收集，几乎不在永久代元空间收集</font>。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725342889575-d53d3591-601c-4ec9-b37b-9f87132323ea.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725342889575-d53d3591-601c-4ec9-b37b-9f87132323ea.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="5">
 <li><strong>对象分配的特殊过程</strong>，当新申请的对象发现在 Eden 区放不下了（进行一次 YGC），发生一次 YGC 还存不下就放入老年代，老年代还放不下就进行一次 FGC，当 FGC 后还是放不下去就报 OOM。期间有一次可以放入的就为对象分配内存空间。</li>
 <li>当进行 YGC 中发现幸存者区还放不下（分代年龄到达阈值），就放入老年代，否则就放入幸存者区。</li>
 <li>在 YGC 发生时可能会发生 FGC，但是在开发中通常的 FGC 发生在 YGC 之后，FGC 由 YGC 触发。</li>
 <li>通常的年轻代、老年代、元空间波峰的展现结果是不一样的，例如 Eden 区的频率较高，波峰比较尖锐；老年代区则是跟台阶一样，一段时间触发一次。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725344854562-6ddf17e1-3c4c-4b3c-88ac-64739ea87e22.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725344854562-6ddf17e1-3c4c-4b3c-88ac-64739ea87e22.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="Minor-GC、Major-GC、Full-GC"><a href="#Minor-GC、Major-GC、Full-GC" class="headerlink" title="Minor GC、Major GC、Full GC"></a>Minor GC、Major GC、Full GC</h3><ol>
 <li>部分收集：不是完整收集整个 Java 堆的垃圾收集。<ol>
 <li>新生代收集（Minor GC、Young GC），只是对新生代（Eden、S0、S1）进行收集。</li>
@@ -931,10 +931,10 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725438672122-6b623eae-bd9c-4fb4-b1bb-ef0308dfd433.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725438672122-6b623eae-bd9c-4fb4-b1bb-ef0308dfd433.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <pre><code class="hljs">2. 运行时常量池则表示的是，在程序运行时将一些字面量存放在常量池中。
 </code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725439939768-bcf613aa-faad-439f-bac4-382a1a0c4576.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725439939768-bcf613aa-faad-439f-bac4-382a1a0c4576.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="方法区的垃圾回收"><a href="#方法区的垃圾回收" class="headerlink" title="方法区的垃圾回收"></a>方法区的垃圾回收</h3><ol>
 <li>判断一个类型是否属于“不再被使用的类”，这是比较苛刻的，需要满足以下三个条件。<ol>
 <li>该类所有的实例都被回收，也就是 Java 堆中不存在该类型以及任何其子类的实例。</li>
@@ -943,7 +943,7 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725442161225-a2f786ba-c18b-4648-9cff-7477c3e809df.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725442161225-a2f786ba-c18b-4648-9cff-7477c3e809df.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h1 id="本地方法库"><a href="#本地方法库" class="headerlink" title="本地方法库"></a>本地方法库</h1><ol>
 <li>一个 Native Method 方法就是一个 Java 调用非 Java 代码的接口，一个 Native Method 是由 C 或者 C++实现的。为了使得 Java 与 C&#x2F;C++柔和在一起。</li>
 </ol>
@@ -999,8 +999,8 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="对象内存布局"><a href="#对象内存布局" class="headerlink" title="对象内存布局"></a>对象内存布局</h2><p><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/45356455/1727658212370-ffbb52af-a23d-472a-8383-845b74d813cb.jpeg" srcset="/mimi-blog/img/loading.gif" lazyload alt="画板"></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725445415991-b55aadde-26f9-4071-a9ff-ca916b57b370.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<h2 id="对象内存布局"><a href="#对象内存布局" class="headerlink" title="对象内存布局"></a>对象内存布局</h2><p><img src="/mimi-blog/image/1727658212370-ffbb52af-a23d-472a-8383-845b74d813cb.jpeg" srcset="/mimi-blog/img/loading.gif" lazyload alt="画板"></p>
+<p><img src="/mimi-blog/image/1725445415991-b55aadde-26f9-4071-a9ff-ca916b57b370.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="访问定位"><a href="#访问定位" class="headerlink" title="访问定位"></a>访问定位</h2><ol>
 <li>通过栈上访问的方式就可以访问到对象实例。</li>
 <li>句柄访问：在堆内存中有一块区域（句柄池），句柄池中记录了<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;对象实例数据的指针以及对象元数据地址&lt;/font&gt;</code>。</li>
@@ -1009,8 +1009,8 @@
 <h1 id="直接内存"><a href="#直接内存" class="headerlink" title="直接内存"></a>直接内存</h1><h1 id="执行引擎"><a href="#执行引擎" class="headerlink" title="执行引擎"></a>执行引擎</h1><ol>
 <li>虚拟机的执行引擎是由软件自行实现的，不受物理条件的约束限制指令级与执行引擎的结构体系，<code>&lt;font style=&quot;color:#DF2A3F;&quot;&gt;能够执行不被硬件直接支持的指令级&lt;/font&gt;</code>。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725447177380-79ab28c4-23ac-4e97-9db4-70658d6415a6.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725448099238-aebc2d51-617e-4082-9b7a-c65ff56c476c.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725447177380-79ab28c4-23ac-4e97-9db4-70658d6415a6.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725448099238-aebc2d51-617e-4082-9b7a-c65ff56c476c.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="2">
 <li>解释的过程：当 Java 虚拟机启动时会根据预定义规范对字节码采用逐行解释的方式执行，将每条字节码文件中的内容“翻译”为对应平台的本地机器指令执行。</li>
 <li>编译的过程：虚拟机将源代码直接编译成和本地机器平台相关的指令执行。</li>
@@ -1041,7 +1041,7 @@
 <li>常量池是 Java 系统级别提供的缓存池，提供在 Java 堆中。</li>
 <li>字符串放入 Java 常量池中的两种方式：直接使用双引号声明，调用 intern 方法将字符串放入缓冲池。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725517999296-bd57dd0b-98a4-40ea-81f0-b964e4f98a4a.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725517999296-bd57dd0b-98a4-40ea-81f0-b964e4f98a4a.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="字符串的拼接操作"><a href="#字符串的拼接操作" class="headerlink" title="字符串的拼接操作"></a>字符串的拼接操作</h2><ol>
 <li>常量和常量拼接结果还是在常量池中，原理是编译器优化。</li>
 <li>常量池中常量是唯一的。</li>
@@ -1058,7 +1058,7 @@
 <li><code>&lt;font style=&quot;color:#ED740C;&quot;&gt;因此在字符串拼接中需要使用 StringBuilder 或者 StringBuffer 来拼接，使用+拼接会不断创建 StringBuilder 对象，直接使用 StringBuilder 则只有一个。&lt;/font&gt;</code></li>
 <li><code>&lt;font style=&quot;color:#ED740C;&quot;&gt;实际开发中如果可以大概确定字符串拼接的长度结果，建议使用 StringBuilder(int)构造器，直接创建对应 capacity 大小的数组，避免过多的扩容操作。&lt;/font&gt;</code></li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725519856319-345e2bf0-f1ac-4eae-8920-75723827a76a.png" srcset="/mimi-blog/img/loading.gif" lazyload>对应字节码文件。</p>
+<p><img src="/mimi-blog/image/1725519856319-345e2bf0-f1ac-4eae-8920-75723827a76a.png" srcset="/mimi-blog/img/loading.gif" lazyload>对应字节码文件。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> 小猫儿老板</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@version</span> 1.0</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span> 2024-9-5 14:57</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StringTest</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;b&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;ab&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span> + <span class="hljs-string">&quot;b&quot;</span>;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">a1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span> + b;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">b1</span> <span class="hljs-operator">=</span> a + <span class="hljs-string">&quot;b&quot;</span>;<br><br>        <span class="hljs-comment">// c 取常量池地址  而 a1 是在堆中</span><br>        <span class="hljs-comment">// 底层new StringBuilder().append(&quot;a&quot;).append(&quot;b&quot;).toString() false</span><br>        System.out.println(c == a1);<br><br>        <span class="hljs-comment">// 和上面原理一样  new StringBuilder() 最终还是new String() 所以两个是不同的对象 false</span><br>        System.out.println(a1 == b1);<br><br>        <span class="hljs-comment">// 常量拼接  在常量池中找  true</span><br>        System.out.println(c == d);<br><br>        <span class="hljs-comment">// true  将拼接结果放入常量池中，并返回常量池地址。如果发现常量池有这个值就直接返回地址</span><br>        System.out.println(a1.intern() == b1.intern());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h2 id="intern-方法"><a href="#intern-方法" class="headerlink" title="intern 方法"></a>intern 方法</h2><ol>
@@ -1096,7 +1096,7 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725526453830-63ae2e4c-65fc-42a2-9122-ed4eefe45a0f.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725526453830-63ae2e4c-65fc-42a2-9122-ed4eefe45a0f.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <pre><code class="hljs">2. **可达性分析算法（根搜索算法）**：可以解决循环引用的问题。
     1. GC Roots 可以是那些具体元素？
         1. 虚拟机栈中引用的对象
@@ -1107,7 +1107,7 @@
         6. Java 虚拟机内部引用
         7. 反应 Java 虚拟机内部情况的 JMXBean、JVMTI 等。
 </code></pre>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725527086714-abd630d2-0c22-467a-8d05-4ee70ebc1281.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725527086714-abd630d2-0c22-467a-8d05-4ee70ebc1281.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="对象的-finalizetion-机制"><a href="#对象的-finalizetion-机制" class="headerlink" title="对象的 finalizetion 机制"></a>对象的 finalizetion 机制</h2><ol>
 <li>对象提供了 finalize 方法，在对象被回收之前将调 finalize 方法。</li>
 <li>如果从所有根节点都访问不到该节点时，那么就认为当前对象要被回收了，回收之前会调用 finalize 方法，finalize 方法手动调用是没效果的，需要 GC 后进行调用。</li>
@@ -1147,7 +1147,7 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725534928065-72c25e0b-c224-4f8d-af3b-df7b1fe2eadd.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725534928065-72c25e0b-c224-4f8d-af3b-df7b1fe2eadd.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a>复制算法</h3><ol>
 <li>当需要进行对象清除时从 ROOT 节点遍历，可达对象直接复制到新表中，赋值完毕后将原来的表做销毁，新表则作保留。</li>
 <li>优缺点：<ol>
@@ -1158,7 +1158,7 @@
 <li>复制算法通常的处理垃圾不是很多，对象占用不是太大才可以。</li>
 <li><code>&lt;font style=&quot;color:#ED740C;&quot;&gt;在幸存者区中使用的就是复制算法&lt;/font&gt;</code>。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725535485284-5d0415ad-1a9f-4aca-9d1b-8e7646af5621.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725535485284-5d0415ad-1a9f-4aca-9d1b-8e7646af5621.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="标记压缩算法"><a href="#标记压缩算法" class="headerlink" title="标记压缩算法"></a>标记压缩算法</h3><ol>
 <li>第一阶段和<code>标记-清除算法</code>一样，从根节点开始递归遍历进行标记。第二阶段将所有的存活对象压缩到内存的一段，按照顺序排放。之后对外界进行清除。</li>
 <li>优缺点：<ol>
@@ -1167,7 +1167,7 @@
 </ol>
 </li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725536355847-c040c0ca-bb0e-47f0-97f7-d539f4f8ed43.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725536355847-c040c0ca-bb0e-47f0-97f7-d539f4f8ed43.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="算法对比"><a href="#算法对比" class="headerlink" title="算法对比"></a>算法对比</h3><ol>
 <li>效率上来说复制算法最好，但是占用较大的内存空间。</li>
 </ol>
@@ -1230,7 +1230,7 @@
 <li>例如下图，当一个对象在引用链上被断开时另一个还存在指向，就会导致下下面一片的对象无法被回收掉，从而导致内存泄漏的问题。</li>
 </ol>
 <p>	</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725601736713-889f94d0-6c21-4100-9af9-5546bc497a77.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725601736713-889f94d0-6c21-4100-9af9-5546bc497a77.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="STW"><a href="#STW" class="headerlink" title="STW"></a>STW</h3><ol>
 <li>由于 GC 线程的开启导致用户线程暂时挂起，这在所有垃圾回收器中都是常见的。</li>
 </ol>
@@ -1238,7 +1238,7 @@
 <li>GC 并不是随时随地执行的，是根据对程序划分的安全点或者安全区域执行的。</li>
 <li>举例：相当于一个货车司机在高速跑长途，在这段路上分别有多个服务区，那么这个服务区就是安全点，司机到达服务区后可以方便（对垃圾进行回收），然后在启动货车（用户线程）继续跑。安全区域就是在一段路程上有一段需要走高速一段则需要走民间小路，当走民间小路时就没有那么多规矩，想方便时随时停下来就可以进行（垃圾回收），这可以叫做安全区域。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725602963362-954060df-8769-43d5-bc21-6e27e90b3ff9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725602963362-954060df-8769-43d5-bc21-6e27e90b3ff9.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="强软弱虚引用"><a href="#强软弱虚引用" class="headerlink" title="强软弱虚引用"></a>强软弱虚引用</h3><ol>
 <li>强引用：直接 new 出来的对象为强引用，垃圾收集器永远不会回收掉这些对象。</li>
 <li>软引用：在系统将要发生内存溢出前，将把软引用对象列入回收范围中进行二次回收，如果此次回收后还没有解决内存溢出的问题则溢出。</li>
@@ -1281,7 +1281,7 @@
 <li>并发回收器：CMS、G1</li>
 </ol>
 <hr>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725609662187-4e03da08-6e48-482a-90f2-fbefc624a704.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725609662187-4e03da08-6e48-482a-90f2-fbefc624a704.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="检查当前版本使用-GC-的情况"><a href="#检查当前版本使用-GC-的情况" class="headerlink" title="检查当前版本使用 GC 的情况"></a>检查当前版本使用 GC 的情况</h2><ol>
 <li><code>jps | jinfo -flag UseParallelGC [pid]</code>。</li>
 <li><code>-XX:+PrintCommandLineFlags</code>，运行时打印命令行标记信息。</li>
@@ -1291,14 +1291,14 @@
 <li>Serial Old 收集器同样是串行回收和“STW”机制的方式执行内存回收，使用的是标记压缩算法。</li>
 <li>优势：简单高效，限定在单个 CPU 环境来说，Serial 收集器由于没有线程交互的开销，可以专心做垃圾收集。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725610783248-d274b01c-56f9-4bb0-9a8d-7bd9a95d4e90.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725610783248-d274b01c-56f9-4bb0-9a8d-7bd9a95d4e90.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="4">
 <li>在开发中通过<code>-XX:+UseSerialGC</code>参数开启使用 SerialGC。效果就是新生代和老年代支持 SerialGC 和 SerialGC Old。</li>
 </ol>
 <h2 id="ParNew-GC"><a href="#ParNew-GC" class="headerlink" title="ParNew GC"></a>ParNew GC</h2><ol>
 <li>ParNew GC 采用并行回收，使用的也是复制算法，也使用了 STW 机制。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725610752956-7e842a69-7029-4042-8fe7-7437ffb06523.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725610752956-7e842a69-7029-4042-8fe7-7437ffb06523.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="2">
 <li><code>-XX:UseParNewGC</code>使用 ParNewGC 回收器，不太常用了解即可。</li>
 </ol>
@@ -1320,7 +1320,7 @@
 <li>CMS 是并发收集器，收集线程和用户线程并发去工作。</li>
 <li>CMS 的垃圾回收算法是标记-清除算法，也会有 STW，但是会降低 STW 的时间。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725612030429-0c65b7a8-6c92-4a1a-a14a-cae920f692cc.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725612030429-0c65b7a8-6c92-4a1a-a14a-cae920f692cc.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="3">
 <li>在运行初期 CMS 会进行对象的初始标记，这一操作是 STW 的，需要停掉用户线程。在后续运行中进行与用户线程的并发标记，因为这一时间是并行的所以在并发标记后进行一次 STW 的重新标记，然后进行并发清理。</li>
 <li>CMS 优缺点：<ol>
@@ -1381,7 +1381,7 @@
 <h3 id="Region"><a href="#Region" class="headerlink" title="Region"></a>Region</h3><ol>
 <li>G1 收集器将堆中空间分为若干个 Region，每个 Region 代表着不同的身份，分别是伊甸园区、幸存者 0 区、幸存者 1 区以及老年代，使其在逻辑上是连续的。假如在 Eden 占领 Region 的情况下是不可能将存放在老年代的对象放入的，也就是不可能出现身份变化的，只有在 Region 被全部释放时才会被赋有新的身份。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725616981969-ff48f345-3905-40b6-8fcf-70fc8414aae6.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725616981969-ff48f345-3905-40b6-8fcf-70fc8414aae6.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <ol start="2">
 <li>在 G1 中出现大对象的概念是因为在之前的分代思想中，如果出现大对象将直接放入老年代中，而这个大对象又不经常使用，可以在一定程度上说是内存泄漏了，所以出现了大对象的概念（如果一个 Region 不够放下一个对象，此时就称为大对象）。</li>
 </ol>
@@ -1398,7 +1398,7 @@
 <li>年轻代垃圾回收只会回收 Eden 和 S0.1。</li>
 <li>YGC 进行时首先停止应用程序的执行 <code>&lt;font style=&quot;color:#ED740C;&quot;&gt;STW&lt;/font&gt;</code>，G1 创建回收集（<code>&lt;font style=&quot;color:#ED740C;&quot;&gt;Collection Set&lt;/font&gt;</code>），回收集指需要被回收的内存分段的集合，年轻代回收过程的回收集包括年轻代 <code>&lt;font style=&quot;color:#ED740C;&quot;&gt;Eden 和幸 Survivor 区所有的内存分段&lt;/font&gt;</code>。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725622765243-cd307670-119a-4541-929a-43d088196f35.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725622765243-cd307670-119a-4541-929a-43d088196f35.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h3 id="回收过程"><a href="#回收过程" class="headerlink" title="回收过程"></a>回收过程</h3><ol>
 <li>扫描根，根指的是 static 变量指向的对象，正在执行的方法表用链条上的局部变量等。根引用连同 RSet 记录的外部引用作为扫描存活对象的入口。</li>
 <li>更新 RSet，处理 dirty card queue 中的 card，更新 RSet。此阶段完成后，RSet 可以准确的反应老年代对所有内存分段中的对象的引用。</li>
@@ -1420,7 +1420,7 @@
 <li>G1 会优先回收 Region 活性较低的区域（垃圾对象越多越先被回收）<code>-XX:G1MixedGCLiveThresholdPercent</code>，默认为 65%。</li>
 <li><code>-XX:G1HeapWastePercent</code>默认值为 10%，允许整个堆中有百分之十的浪费，如果低于这个阈值，则不再进行混合回收。</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2024/png/45356455/1725625107989-8b5ce144-f175-4d36-85f7-7f95df3182ba.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
+<p><img src="/mimi-blog/image/1725625107989-8b5ce144-f175-4d36-85f7-7f95df3182ba.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h2 id="常用-GC-参数设置"><a href="#常用-GC-参数设置" class="headerlink" title="常用 GC 参数设置"></a>常用 GC 参数设置</h2>
                 
               </div>
