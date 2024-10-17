@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>41.缺失的第一个正数</title>
+    <link href="/mimi-blog/2024/10/17/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/"/>
+    <url>/mimi-blog/2024/10/17/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="41-缺失的第一个正数"><a href="#41-缺失的第一个正数" class="headerlink" title="41. 缺失的第一个正数"></a><a href="https://leetcode.cn/problems/first-missing-positive/">41. 缺失的第一个正数</a></h1><p>给你一个未排序的整数数组 <code>nums</code> ，请你找出其中没有出现的最小的正整数。</p><p>请你实现时间复杂度为 <code>O(n)</code> 并且只使用常数级别额外空间的解决方案。</p><p><strong>示例 1：</strong></p><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：nums = <span class="hljs-comment">[1,2,0]</span><br>输出：3<br>解释：范围 <span class="hljs-comment">[1,2]</span> 中的数字都在数组中。<br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs fix"><span class="hljs-attr">输入：nums </span>=<span class="hljs-string"> [3,4,-1,1]</span><br><span class="hljs-string">输出：2</span><br><span class="hljs-string">解释：1 在数组中，但 2 没有。</span><br></code></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">输入：nums = <span class="hljs-string">[7,8,9,11,12]</span><br>输出：<span class="hljs-number">1</span><br>解释：最小的正数 <span class="hljs-number">1</span> 没有出现。<br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li><code>1 &lt;= nums.length &lt;= 105</code></li><li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li></ul><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol><li>因为是查找最小缺失的正整数，所以先排序再将小于等于0的过滤掉，再做去重操作。</li><li>最后在无重复正整数中遍历即可，其中在该无重复区间中的每个数的下标需要对应[1,2,3,4,…..]，如果发现不对应的则立即返回start，否则返回数组最大元素+1。</li></ol><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">firstMissingPositive</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums)</span> &#123;<br>        Arrays.sort(nums);<br>        <span class="hljs-type">int</span> i, j, start, index = <span class="hljs-number">1</span>;<br>        <span class="hljs-comment">// 去除复数和重复的数字 双指针</span><br>        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>; i &lt; nums.length &amp;&amp; nums[i] &lt;= <span class="hljs-number">0</span>; i++, j++) ;<br>        <span class="hljs-keyword">if</span> (i &gt;= nums.length) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>        &#125;<br>        start = i;<br>        <span class="hljs-keyword">while</span> (i &lt; nums.length) &#123;<br>            <span class="hljs-keyword">if</span> (nums[i] == nums[j]) &#123;<br>                i++;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                nums[j + <span class="hljs-number">1</span>] = nums[i++];<br>                j++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (; start &lt;= j; start++) &#123;<br>            <span class="hljs-keyword">if</span> (nums[start] != index) &#123;<br>                <span class="hljs-keyword">return</span> index;<br>            &#125;<br>            index++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> nums[nums.length - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>算法</tag>
+      
+      <tag>数据结构</tag>
+      
+      <tag>Java</tag>
+      
+      <tag>数组</tag>
+      
+      <tag>双指针</tag>
+      
+      <tag>LeetCode</tag>
+      
+      <tag>去重</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>3194.最小元素和最大元素的最小平均值</title>
     <link href="/mimi-blog/2024/10/16/%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0%E5%92%8C%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0%E7%9A%84%E6%9C%80%E5%B0%8F%E5%B9%B3%E5%9D%87%E5%80%BC/"/>
     <url>/mimi-blog/2024/10/16/%E6%9C%80%E5%B0%8F%E5%85%83%E7%B4%A0%E5%92%8C%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0%E7%9A%84%E6%9C%80%E5%B0%8F%E5%B9%B3%E5%9D%87%E5%80%BC/</url>
