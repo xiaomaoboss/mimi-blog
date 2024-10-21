@@ -23,6 +23,7 @@
 <meta property="og:site_name" content="Mimiboss">
 <meta property="og:description" content="BeanDefinition 包装了一个类的 Mate 数据信息，这里的 Mate 数据指的是在外观来看 Bean 涉及到了那些信息，例如 XML 中声明一个 Bean 的 id、class、scope 等。 &lt;font style&#x3D;&quot;color:#DF2A3F;&quot;&gt;接口抽象类组织软件框架、底层实现类展示功能细节&lt;&#x2F;font&gt;。  12345&lt;be">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/image-20241020095407700.png">
 <meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1728903724451-a09b0f3f-4ca3-474a-a371-ea8068190180.png">
 <meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1728974018400-30f5eeeb-d7c0-4a39-9b49-f60d4e9a28d9.png">
 <meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1728977669199-d7713f12-deb9-4984-8a16-22b2d7f7b6ee.png">
@@ -31,14 +32,14 @@
 <meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1729318401537-1b939e0f-10b8-4bd9-91ee-cae9a28010cf.png">
 <meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1729317823228-1799276b-3fad-43b9-ba29-816c236e13b0.png">
 <meta property="article:published_time" content="2024-10-19T07:47:37.000Z">
-<meta property="article:modified_time" content="2024-10-19T07:52:54.234Z">
+<meta property="article:modified_time" content="2024-10-20T04:34:52.310Z">
 <meta property="article:author" content="Mimiboss">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="知识库">
 <meta property="article:tag" content="Spring">
 <meta property="article:tag" content="源码">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1728903724451-a09b0f3f-4ca3-474a-a371-ea8068190180.png">
+<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/image-20241020095407700.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -335,7 +336,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：5 小时前
+                    本文最后更新于：1 天前
                   
                 
               </p>
@@ -349,6 +350,10 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;bean id=<span class="hljs-string">&quot;userEntity&quot;</span> class=<span class="hljs-string">&quot;com.mimiboss.entity.UserPojo&quot;</span> scope=<span class="hljs-string">&quot;prototype&quot;</span>&gt;<br>    &lt;property name=<span class="hljs-string">&quot;date&quot;</span> ref=<span class="hljs-string">&quot;date&quot;</span>/&gt;<br>    &lt;property name=<span class="hljs-string">&quot;sessionId&quot;</span> value=<span class="hljs-string">&quot;sessionId&quot;</span>/&gt;<br>    &lt;property name=<span class="hljs-string">&quot;username&quot;</span> value=<span class="hljs-string">&quot;username&quot;</span>/&gt;<br>&lt;/bean&gt;<br></code></pre></td></tr></table></figure>
 
+<ol start="3">
+<li>其中收集Bean的元数据为一下几种：</li>
+</ol>
+<p><img src="/mimi-blog/image/image-20241020095407700.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="image-20241020095407700"></p>
 <h2 id="常用体系结构"><a href="#常用体系结构" class="headerlink" title="常用体系结构"></a>常用体系结构</h2><p><img src="/mimi-blog/image/1728903724451-a09b0f3f-4ca3-474a-a371-ea8068190180.png" srcset="/mimi-blog/img/loading.gif" lazyload></p>
 <h1 id="ClassPathBeanDefinitionScanner"><a href="#ClassPathBeanDefinitionScanner" class="headerlink" title="ClassPathBeanDefinitionScanner"></a>ClassPathBeanDefinitionScanner</h1><ol>
 <li>指定全限定包，进行扫描。</li>
@@ -600,7 +605,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月19日</div>
+          <div>2024年10月20日</div>
         </div>
       
       
