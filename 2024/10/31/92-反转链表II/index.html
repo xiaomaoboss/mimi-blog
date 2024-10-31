@@ -16,32 +16,30 @@
   <meta name="author" content="Mimiboss">
   <meta name="keywords" content="">
   
-    <meta name="description" content="54. 螺旋矩阵给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。 示例 1：  12输入：matrix &#x3D; [[1,2,3],[4,5,6],[7,8,9]]输出：[1,2,3,6,9,8,7,4,5]  示例 2：  12输入：matrix &#x3D; [[1,2,3,4],[5,6,7,8],[9,10,11,12]]输出：[1,2,3,4,8,12,1">
+    <meta name="description" content="92. 反转链表 II给你单链表的头指针 head 和两个整数 left 和 right ，其中 left &lt;&#x3D; right 。请你反转从位置 left 到位置 right 的链表节点，返回 反转后的链表 。 示例 1：  12输入：head &#x3D; [1,2,3,4,5], left &#x3D; 2, right &#x3D; 4输出：[1,4,3,2,5]  示例 2： 12输入：head &#x3D; [5], le">
 <meta property="og:type" content="article">
-<meta property="og:title" content="54.螺旋矩阵">
-<meta property="og:url" content="https://xiaomaoboss.github.io/mimi-blog/2024/10/17/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/index.html">
+<meta property="og:title" content="92.反转链表II">
+<meta property="og:url" content="https://xiaomaoboss.github.io/mimi-blog/2024/10/31/92-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II/index.html">
 <meta property="og:site_name" content="Mimiboss">
-<meta property="og:description" content="54. 螺旋矩阵给你一个 m 行 n 列的矩阵 matrix ，请按照 顺时针螺旋顺序 ，返回矩阵中的所有元素。 示例 1：  12输入：matrix &#x3D; [[1,2,3],[4,5,6],[7,8,9]]输出：[1,2,3,6,9,8,7,4,5]  示例 2：  12输入：matrix &#x3D; [[1,2,3,4],[5,6,7,8],[9,10,11,12]]输出：[1,2,3,4,8,12,1">
+<meta property="og:description" content="92. 反转链表 II给你单链表的头指针 head 和两个整数 left 和 right ，其中 left &lt;&#x3D; right 。请你反转从位置 left 到位置 right 的链表节点，返回 反转后的链表 。 示例 1：  12输入：head &#x3D; [1,2,3,4,5], left &#x3D; 2, right &#x3D; 4输出：[1,4,3,2,5]  示例 2： 12输入：head &#x3D; [5], le">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/spiral1.jpg">
-<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/spiral.jpg">
-<meta property="article:published_time" content="2024-10-17T11:54:36.000Z">
-<meta property="article:modified_time" content="2024-10-17T11:57:02.221Z">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/image-20241031204608969.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/image-20241031205725828.png">
+<meta property="article:published_time" content="2024-10-31T12:45:39.000Z">
+<meta property="article:modified_time" content="2024-10-31T12:57:44.582Z">
 <meta property="article:author" content="Mimiboss">
+<meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="Java">
-<meta property="article:tag" content="算法">
-<meta property="article:tag" content="数据结构">
-<meta property="article:tag" content="LeetCode">
-<meta property="article:tag" content="数组">
-<meta property="article:tag" content="模拟">
+<meta property="article:tag" content="链表">
+<meta property="article:tag" content="头插">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/spiral1.jpg">
+<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/image-20241031204608969.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>54.螺旋矩阵 - Mimiboss</title>
+  <title>92.反转链表II - Mimiboss</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -248,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="54.螺旋矩阵"></span>
+            <span id="subtitle" data-typed-text="92.反转链表II"></span>
           
         </div>
 
@@ -259,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-17 19:54" pubdate>
-          2024年10月17日 晚上
+        <time datetime="2024-10-31 20:45" pubdate>
+          2024年10月31日 晚上
         </time>
       </span>
     
@@ -271,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          1.1k 字
         
       </span>
     
@@ -282,7 +280,7 @@
         
         
         
-          12 分钟
+          10 分钟
         
       </span>
     
@@ -327,12 +325,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">54.螺旋矩阵</h1>
+            <h1 id="seo-header">92.反转链表II</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：14 天前
+                    本文最后更新于：17 分钟前
                   
                 
               </p>
@@ -340,26 +338,32 @@
             
               <div class="markdown-body">
                 
-                <h2 id="54-螺旋矩阵"><a href="#54-螺旋矩阵" class="headerlink" title="54. 螺旋矩阵"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/spiral-matrix/">54. 螺旋矩阵</a></h2><p>给你一个 <code>m</code> 行 <code>n</code> 列的矩阵 <code>matrix</code> ，请按照 <strong>顺时针螺旋顺序</strong> ，返回矩阵中的所有元素。</p>
+                <h1 id="92-反转链表-II"><a href="#92-反转链表-II" class="headerlink" title="92. 反转链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list-ii/">92. 反转链表 II</a></h1><p>给你单链表的头指针 <code>head</code> 和两个整数 <code>left</code> 和 <code>right</code> ，其中 <code>left &lt;= right</code> 。请你反转从位置 <code>left</code> 到位置 <code>right</code> 的链表节点，返回 <strong>反转后的链表</strong> 。</p>
 <p><strong>示例 1：</strong></p>
-<p><img src="/mimi-blog/image/spiral1.jpg" srcset="/mimi-blog/img/loading.gif" lazyload alt="img"></p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：matrix = <span class="hljs-comment">[<span class="hljs-comment">[1,2,3]</span>,<span class="hljs-comment">[4,5,6]</span>,<span class="hljs-comment">[7,8,9]</span>]</span><br>输出：<span class="hljs-comment">[1,2,3,6,9,8,7,4,5]</span><br></code></pre></td></tr></table></figure>
+<p><img src="/mimi-blog/image/image-20241031204608969.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="image-20241031204608969"></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">输入：head = <span class="hljs-selector-attr">[1,2,3,4,5]</span>, <span class="hljs-attribute">left</span> = <span class="hljs-number">2</span>, right = <span class="hljs-number">4</span><br>输出：<span class="hljs-selector-attr">[1,4,3,2,5]</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>示例 2：</strong></p>
-<p><img src="/mimi-blog/image/spiral.jpg" srcset="/mimi-blog/img/loading.gif" lazyload alt="img"></p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入：matrix = [[<span class="hljs-number">1,2,3,4</span>],[<span class="hljs-number">5,6,7,8</span>],[<span class="hljs-number">9,10,11,12</span>]]<br>输出：[<span class="hljs-number">1,2,3,4</span>,<span class="hljs-number">8,12,11,10</span>,<span class="hljs-number">9,5,6,7</span>]<br></code></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">输入：head = <span class="hljs-selector-attr">[5]</span>, <span class="hljs-attribute">left</span> = <span class="hljs-number">1</span>, right = <span class="hljs-number">1</span><br>输出：<span class="hljs-selector-attr">[5]</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>m == matrix.length</code></li>
-<li><code>n == matrix[i].length</code></li>
-<li><code>1 &lt;= m, n &lt;= 10</code></li>
-<li><code>-100 &lt;= matrix[i][j] &lt;= 100</code></li>
+<li>链表中节点数目为 <code>n</code></li>
+<li><code>1 &lt;= n &lt;= 500</code></li>
+<li><code>-500 &lt;= Node.val &lt;= 500</code></li>
+<li><code>1 &lt;= left &lt;= right &lt;= n</code></li>
 </ul>
-<h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol>
-<li>一圈一圈模拟，这个解法麻烦了，还考虑了是否为标准长方形，实则不用考虑直接旋转即可。</li>
+<h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><h3 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h3><ol>
+<li>先遍历一遍，得到左右端点进行反转，然后在进行拼接。需要遍历两次链表完成。</li>
 </ol>
-<h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> List&lt;Integer&gt; <span class="hljs-title function_">spiralOrder</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] matrix)</span> &#123;<br>        List&lt;Integer&gt; res = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-comment">// 只有一行或者一列的情况</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">xlen</span> <span class="hljs-operator">=</span> matrix.length, ylen = matrix[<span class="hljs-number">0</span>].length, x = <span class="hljs-number">0</span>, y = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">if</span> (xlen == <span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; ylen; i++) &#123;<br>                res.add(matrix[<span class="hljs-number">0</span>][i]);<br>            &#125;<br>            <span class="hljs-keyword">return</span> res;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (ylen == <span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span>[] ints : matrix) &#123;<br>                res.add(ints[<span class="hljs-number">0</span>]);<br>            &#125;<br>            <span class="hljs-keyword">return</span> res;<br>        &#125;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">sm</span> <span class="hljs-operator">=</span> xlen, n;<br>        <span class="hljs-comment">// t 标准 f 窄</span><br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">flag</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">if</span> (xlen &gt; ylen) &#123;<br>            flag = <span class="hljs-literal">false</span>;<br>            sm = ylen;<br>        &#125;<br>        n = sm / <span class="hljs-number">2</span>;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-keyword">for</span> (; y &lt; ylen - i; y++) &#123;<br>                res.add(matrix[x][y]);<br>            &#125;<br>            <span class="hljs-keyword">for</span> (x++, y--; x &lt; xlen - i; x++) &#123;<br>                res.add(matrix[x][y]);<br>            &#125;<br>            <span class="hljs-keyword">for</span> (x--, y--; y &gt;= i; y--) &#123;<br>                res.add(matrix[x][y]);<br>            &#125;<br>            <span class="hljs-keyword">for</span> (x--, y++; x &gt; i; x--) &#123;<br>                res.add(matrix[x][y]);<br>            &#125;<br>            x = i + <span class="hljs-number">1</span>;<br>            y = i + <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-comment">// 标准长方形  窄长方形</span><br>        <span class="hljs-keyword">if</span> (sm % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">t</span> <span class="hljs-operator">=</span> x, m = y;<br>            <span class="hljs-keyword">if</span> (flag) &#123;<br>                <span class="hljs-comment">// 标准</span><br>                <span class="hljs-keyword">for</span> (; y &lt; ylen - m; y++) &#123;<br>                    res.add(matrix[x][y]);<br>                &#125;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-comment">// 窄</span><br>                <span class="hljs-keyword">for</span> (; x &lt; xlen - t; x++) &#123;<br>                    res.add(matrix[x][y]);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h3><ol>
+<li>使用头插法，分别定义pre、cur指针，pre表示左端点的前一个节点，cur则表示当前节点。</li>
+<li>首先遍历得到最左端点，然后将cur.next 以头插的方式进行移动（在局部链表中进行），经过（right-left, 因为这里不带左端点，所以这里不需要 + 1）次移动过后即可完成。</li>
+</ol>
+<p><img src="/mimi-blog/image/image-20241031205725828.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="image-20241031205725828"></p>
+<h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">reverseBetween</span><span class="hljs-params">(ListNode head, <span class="hljs-type">int</span> left, <span class="hljs-type">int</span> right)</span> &#123;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">dummy</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-number">0</span>);<br>        dummy.next = head;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> right - left;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">pre</span> <span class="hljs-operator">=</span> dummy, cur = dummy.next;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; left - <span class="hljs-number">1</span>; i++) &#123;<br>            pre = pre.next;<br>            cur = cur.next;<br>        &#125;<br>        <span class="hljs-keyword">while</span> (count-- != <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-type">ListNode</span> <span class="hljs-variable">tn</span> <span class="hljs-operator">=</span> pre.next;<br>            pre.next = cur.next;<br>            cur.next = cur.next.next;<br>            pre.next.next = tn;<br>        &#125;<br>        <span class="hljs-keyword">return</span> dummy.next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
 
 
                 
@@ -373,17 +377,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/mimi-blog/tags/leetcode/" class="print-no-link">#leetcode</a>
+      
         <a href="/mimi-blog/tags/Java/" class="print-no-link">#Java</a>
       
-        <a href="/mimi-blog/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
+        <a href="/mimi-blog/tags/%E9%93%BE%E8%A1%A8/" class="print-no-link">#链表</a>
       
-        <a href="/mimi-blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="print-no-link">#数据结构</a>
-      
-        <a href="/mimi-blog/tags/LeetCode/" class="print-no-link">#LeetCode</a>
-      
-        <a href="/mimi-blog/tags/%E6%95%B0%E7%BB%84/" class="print-no-link">#数组</a>
-      
-        <a href="/mimi-blog/tags/%E6%A8%A1%E6%8B%9F/" class="print-no-link">#模拟</a>
+        <a href="/mimi-blog/tags/%E5%A4%B4%E6%8F%92/" class="print-no-link">#头插</a>
       
     </div>
   
@@ -395,8 +395,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>54.螺旋矩阵</div>
-      <div>https://xiaomaoboss.github.io/mimi-blog/2024/10/17/54-螺旋矩阵/</div>
+      <div>92.反转链表II</div>
+      <div>https://xiaomaoboss.github.io/mimi-blog/2024/10/31/92-反转链表II/</div>
     </div>
     <div class="license-meta">
       
@@ -408,13 +408,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月17日</div>
+          <div>2024年10月31日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月17日</div>
+          <div>2024年10月31日</div>
         </div>
       
       
@@ -445,9 +445,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/mimi-blog/2024/10/17/59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5%E2%85%A1/" title="59.螺旋矩阵2">
+                      <a href="/mimi-blog/2024/10/31/25-K%E4%B8%AA%E4%B8%80%E7%BB%84%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" title="25.K个一组反转链表">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">59.螺旋矩阵2</span>
+                        <span class="hidden-mobile">25.K个一组反转链表</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -455,8 +455,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/mimi-blog/2024/10/17/41-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/" title="41.缺失的第一个正数">
-                        <span class="hidden-mobile">41.缺失的第一个正数</span>
+                      <a href="/mimi-blog/2024/10/31/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/" title="24.两两交换链表中的节点">
+                        <span class="hidden-mobile">24.两两交换链表中的节点</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

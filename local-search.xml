@@ -4,6 +4,79 @@
   
   
   <entry>
+    <title>25.K个一组反转链表</title>
+    <link href="/mimi-blog/2024/10/31/25-K%E4%B8%AA%E4%B8%80%E7%BB%84%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
+    <url>/mimi-blog/2024/10/31/25-K%E4%B8%AA%E4%B8%80%E7%BB%84%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="25-K-个一组翻转链表"><a href="#25-K-个一组翻转链表" class="headerlink" title="25. K 个一组翻转链表"></a><a href="https://leetcode.cn/problems/reverse-nodes-in-k-group/">25. K 个一组翻转链表</a></h1><p>给你链表的头节点 <code>head</code> ，每 <code>k</code> 个节点一组进行翻转，请你返回修改后的链表。</p><p><code>k</code> 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 <code>k</code> 的整数倍，那么请将最后剩余的节点保持原有顺序。</p><p>你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。</p><p><strong>示例 1：</strong></p><p><img src="/mimi-blog/image/reverse_ex1.jpg" alt="img"></p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">输入：head = <span class="hljs-string">[1,2,3,4,5]</span>, k = <span class="hljs-number">2</span><br>输出：<span class="hljs-string">[2,1,4,3,5]</span><br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><p><img src="/mimi-blog/image/reverse_ex2.jpg" alt="img"></p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">输入：head = <span class="hljs-string">[1,2,3,4,5]</span>, k = <span class="hljs-number">3</span><br>输出：<span class="hljs-string">[3,2,1,4,5]</span><br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>链表中的节点数目为 <code>n</code></li><li><code>1 &lt;= k &lt;= n &lt;= 5000</code></li><li><code>0 &lt;= Node.val &lt;= 1000</code></li></ul><p><strong>进阶：</strong>你可以设计一个只用 <code>O(1)</code> 额外内存空间的算法解决此问题吗？</p><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol><li>和<a href="http://xiaomaoboss.github.io/mimi-blog/2024/10/31/25-K%E4%B8%AA%E4%B8%80%E7%BB%84%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8">http://xiaomaoboss.github.io/mimi-blog/2024/10/31/25-K个一组反转链表</a>  中的中心思想一致，不一样的是这里需要多次反转。每次反转k - 1个元素就重置pre和cur指针，然后继续头插移动元素即可。这里需要注意的是，题目给定<strong>如果剩余节点个数不足k个，则无序反转，所以这里一开始计算了链表长度</strong>。</li></ol><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">reverseKGroup</span><span class="hljs-params">(ListNode head, <span class="hljs-type">int</span> k)</span> &#123;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">dummy</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-number">0</span>);<br>        dummy.next = head;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">pre</span> <span class="hljs-operator">=</span> dummy, cur = dummy.next;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">len</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, count = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> head;<br>        <span class="hljs-keyword">while</span> (temp != <span class="hljs-literal">null</span>) &#123;<br>            temp = temp.next;<br>            len++;<br>        &#125;<br>        count = len / k;<br>        <span class="hljs-keyword">while</span> (count-- &gt; <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; k - <span class="hljs-number">1</span>; i++) &#123;<br>                <span class="hljs-type">ListNode</span> <span class="hljs-variable">tn</span> <span class="hljs-operator">=</span> pre.next;<br>                pre.next = cur.next;<br>                cur.next = cur.next.next;<br>                pre.next.next = tn;<br>            &#125;<br>            pre = cur;<br>            cur = cur.next;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> dummy.next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+      <tag>Java</tag>
+      
+      <tag>链表</tag>
+      
+      <tag>头插</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>92.反转链表II</title>
+    <link href="/mimi-blog/2024/10/31/92-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II/"/>
+    <url>/mimi-blog/2024/10/31/92-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II/</url>
+    
+    <content type="html"><![CDATA[<h1 id="92-反转链表-II"><a href="#92-反转链表-II" class="headerlink" title="92. 反转链表 II"></a><a href="https://leetcode.cn/problems/reverse-linked-list-ii/">92. 反转链表 II</a></h1><p>给你单链表的头指针 <code>head</code> 和两个整数 <code>left</code> 和 <code>right</code> ，其中 <code>left &lt;= right</code> 。请你反转从位置 <code>left</code> 到位置 <code>right</code> 的链表节点，返回 <strong>反转后的链表</strong> 。</p><p><strong>示例 1：</strong></p><p><img src="/mimi-blog/image/image-20241031204608969.png" alt="image-20241031204608969"></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">输入：head = <span class="hljs-selector-attr">[1,2,3,4,5]</span>, <span class="hljs-attribute">left</span> = <span class="hljs-number">2</span>, right = <span class="hljs-number">4</span><br>输出：<span class="hljs-selector-attr">[1,4,3,2,5]</span><br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">输入：head = <span class="hljs-selector-attr">[5]</span>, <span class="hljs-attribute">left</span> = <span class="hljs-number">1</span>, right = <span class="hljs-number">1</span><br>输出：<span class="hljs-selector-attr">[5]</span><br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>链表中节点数目为 <code>n</code></li><li><code>1 &lt;= n &lt;= 500</code></li><li><code>-500 &lt;= Node.val &lt;= 500</code></li><li><code>1 &lt;= left &lt;= right &lt;= n</code></li></ul><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><h3 id="解法一"><a href="#解法一" class="headerlink" title="解法一"></a>解法一</h3><ol><li>先遍历一遍，得到左右端点进行反转，然后在进行拼接。需要遍历两次链表完成。</li></ol><h3 id="解法二"><a href="#解法二" class="headerlink" title="解法二"></a>解法二</h3><ol><li>使用头插法，分别定义pre、cur指针，pre表示左端点的前一个节点，cur则表示当前节点。</li><li>首先遍历得到最左端点，然后将cur.next 以头插的方式进行移动（在局部链表中进行），经过（right-left, 因为这里不带左端点，所以这里不需要 + 1）次移动过后即可完成。</li></ol><p><img src="/mimi-blog/image/image-20241031205725828.png" alt="image-20241031205725828"></p><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">reverseBetween</span><span class="hljs-params">(ListNode head, <span class="hljs-type">int</span> left, <span class="hljs-type">int</span> right)</span> &#123;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">dummy</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-number">0</span>);<br>        dummy.next = head;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> right - left;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">pre</span> <span class="hljs-operator">=</span> dummy, cur = dummy.next;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; left - <span class="hljs-number">1</span>; i++) &#123;<br>            pre = pre.next;<br>            cur = cur.next;<br>        &#125;<br>        <span class="hljs-keyword">while</span> (count-- != <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-type">ListNode</span> <span class="hljs-variable">tn</span> <span class="hljs-operator">=</span> pre.next;<br>            pre.next = cur.next;<br>            cur.next = cur.next.next;<br>            pre.next.next = tn;<br>        &#125;<br>        <span class="hljs-keyword">return</span> dummy.next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+      <tag>Java</tag>
+      
+      <tag>链表</tag>
+      
+      <tag>头插</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>24.两两交换链表中的节点</title>
+    <link href="/mimi-blog/2024/10/31/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/"/>
+    <url>/mimi-blog/2024/10/31/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a><a href="https://leetcode.cn/problems/swap-nodes-in-pairs/">24. 两两交换链表中的节点</a></h1><p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p><p><strong>示例 1：</strong></p><p><img src="/mimi-blog/image/swap_ex1.jpg" alt="img"></p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入：head = [<span class="hljs-number">1,2,3,4</span>]<br>输出：[<span class="hljs-number">2,1,4,3</span>]<br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：head = <span class="hljs-comment">[]</span><br>输出：<span class="hljs-comment">[]</span><br></code></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：head = <span class="hljs-comment">[1]</span><br>输出：<span class="hljs-comment">[1]</span><br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>链表中节点的数目在范围 <code>[0, 100]</code> 内</li><li><code>0 &lt;= Node.val &lt;= 100</code></li></ul><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol><li>使用递归的方式进行，递归解决链表问题的三要素：<ul><li>拿到子规模的问题答案，这里的tn就是子问题的答案。</li><li>最终子问题答案， 判空就是最终子问题答案。</li><li>拿到答案后需要进行的操作，将两节点交换指向。</li></ul></li></ol><p><img src="/mimi-blog/image/image-20241031200537362.png" alt="image-20241031200537362"></p><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">swapPairs</span><span class="hljs-params">(ListNode head)</span> &#123;<br>        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.next == <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">tn</span> <span class="hljs-operator">=</span> swapPairs(head.next.next);<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">next</span> <span class="hljs-operator">=</span> head.next;<br>        head.next.next = head;<br>        head.next = tn;<br>        <span class="hljs-keyword">return</span> next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+      <tag>Java</tag>
+      
+      <tag>链表</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>EffectiveJava</title>
     <link href="/mimi-blog/2024/10/21/EffectiveJava/"/>
     <url>/mimi-blog/2024/10/21/EffectiveJava/</url>
@@ -35,9 +108,9 @@
     
     <tags>
       
-      <tag>双指针</tag>
-      
       <tag>链表</tag>
+      
+      <tag>双指针</tag>
       
       <tag>虚拟节点</tag>
       
@@ -58,9 +131,9 @@
     
     <tags>
       
-      <tag>双指针</tag>
-      
       <tag>链表</tag>
+      
+      <tag>双指针</tag>
       
       <tag>虚拟节点</tag>
       
@@ -81,9 +154,9 @@
     
     <tags>
       
-      <tag>数据结构</tag>
-      
       <tag>链表</tag>
+      
+      <tag>数据结构</tag>
       
     </tags>
     
@@ -104,11 +177,11 @@
       
       <tag>Java</tag>
       
+      <tag>知识库</tag>
+      
       <tag>Spring</tag>
       
       <tag>源码</tag>
-      
-      <tag>知识库</tag>
       
     </tags>
     
@@ -127,11 +200,11 @@
     
     <tags>
       
+      <tag>Java</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
-      
-      <tag>Java</tag>
       
       <tag>LeetCode</tag>
       
@@ -156,11 +229,11 @@
     
     <tags>
       
+      <tag>Java</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
-      
-      <tag>Java</tag>
       
       <tag>LeetCode</tag>
       
@@ -185,11 +258,11 @@
     
     <tags>
       
+      <tag>Java</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
-      
-      <tag>Java</tag>
       
       <tag>LeetCode</tag>
       
@@ -216,17 +289,17 @@
     
     <tags>
       
+      <tag>leetcode</tag>
+      
+      <tag>Java</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
       
-      <tag>Java</tag>
-      
       <tag>双指针</tag>
       
       <tag>数组</tag>
-      
-      <tag>leetcode</tag>
       
       <tag>排序</tag>
       
@@ -272,11 +345,11 @@
     
     <tags>
       
+      <tag>Java</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
-      
-      <tag>Java</tag>
       
     </tags>
     
