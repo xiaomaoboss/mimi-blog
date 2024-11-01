@@ -16,29 +16,30 @@
   <meta name="author" content="Mimiboss">
   <meta name="keywords" content="">
   
-    <meta name="description" content="24. 两两交换链表中的节点给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。 示例 1：  12输入：head &#x3D; [1,2,3,4]输出：[2,1,4,3]  示例 2： 12输入：head &#x3D; []输出：[]  示例 3： 12输入：head &#x3D; [1]输出：[1]  提示：  链表中节点的数目在范围 [0,">
+    <meta name="description" content="147. 对链表进行插入排序给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。 插入排序 算法的步骤:  插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出列表。 每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。 重复直到所有输入数据插入完为止。  下面是插入排序算法的一个图形示例。部分排序的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="24.两两交换链表中的节点">
-<meta property="og:url" content="https://xiaomaoboss.github.io/mimi-blog/2024/10/31/24-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/index.html">
+<meta property="og:title" content="147.对链表进行插入排序">
+<meta property="og:url" content="https://xiaomaoboss.github.io/mimi-blog/2024/11/01/147-%E5%AF%B9%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Mimiboss">
-<meta property="og:description" content="24. 两两交换链表中的节点给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。 示例 1：  12输入：head &#x3D; [1,2,3,4]输出：[2,1,4,3]  示例 2： 12输入：head &#x3D; []输出：[]  示例 3： 12输入：head &#x3D; [1]输出：[1]  提示：  链表中节点的数目在范围 [0,">
+<meta property="og:description" content="147. 对链表进行插入排序给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。 插入排序 算法的步骤:  插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出列表。 每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。 重复直到所有输入数据插入完为止。  下面是插入排序算法的一个图形示例。部分排序的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/swap_ex1.jpg">
-<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/image-20241031200537362.png">
-<meta property="article:published_time" content="2024-10-31T11:58:25.000Z">
-<meta property="article:modified_time" content="2024-10-31T12:07:59.384Z">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1724130387-qxfMwx-Insertion-sort-example-300px.gif">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1724130414-QbPAjl-image.png">
+<meta property="og:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1724130432-zoOvdI-image.png">
+<meta property="article:published_time" content="2024-11-01T12:35:12.000Z">
+<meta property="article:modified_time" content="2024-11-01T12:44:33.079Z">
 <meta property="article:author" content="Mimiboss">
 <meta property="article:tag" content="链表">
 <meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="排序">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/swap_ex1.jpg">
+<meta name="twitter:image" content="https://xiaomaoboss.github.io/mimi-blog/image/1724130387-qxfMwx-Insertion-sort-example-300px.gif">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>24.两两交换链表中的节点 - Mimiboss</title>
+  <title>147.对链表进行插入排序 - Mimiboss</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -245,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="24.两两交换链表中的节点"></span>
+            <span id="subtitle" data-typed-text="147.对链表进行插入排序"></span>
           
         </div>
 
@@ -256,8 +257,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-31 19:58" pubdate>
-          2024年10月31日 晚上
+        <time datetime="2024-11-01 20:35" pubdate>
+          2024年11月1日 晚上
         </time>
       </span>
     
@@ -268,7 +269,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          797 字
+          1.5k 字
         
       </span>
     
@@ -279,7 +280,7 @@
         
         
         
-          7 分钟
+          13 分钟
         
       </span>
     
@@ -324,12 +325,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">24.两两交换链表中的节点</h1>
+            <h1 id="seo-header">147.对链表进行插入排序</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：1 天前
+                    本文最后更新于：1 小时前
                   
                 
               </p>
@@ -337,32 +338,38 @@
             
               <div class="markdown-body">
                 
-                <h1 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">24. 两两交换链表中的节点</a></h1><p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p>
+                <h1 id="147-对链表进行插入排序"><a href="#147-对链表进行插入排序" class="headerlink" title="147. 对链表进行插入排序"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/insertion-sort-list/">147. 对链表进行插入排序</a></h1><p>给定单个链表的头 <code>head</code> ，使用 <strong>插入排序</strong> 对链表进行排序，并返回 <em>排序后链表的头</em> 。</p>
+<p><strong>插入排序</strong> 算法的步骤:</p>
+<ol>
+<li>插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出列表。</li>
+<li>每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。</li>
+<li>重复直到所有输入数据插入完为止。</li>
+</ol>
+<p>下面是插入排序算法的一个图形示例。部分排序的列表(黑色)最初只包含列表中的第一个元素。每次迭代时，从输入数据中删除一个元素(红色)，并就地插入已排序的列表中。</p>
+<p>对链表进行插入排序。</p>
+<p><img src="/mimi-blog/image/1724130387-qxfMwx-Insertion-sort-example-300px.gif" srcset="/mimi-blog/img/loading.gif" lazyload alt="img"></p>
 <p><strong>示例 1：</strong></p>
-<p><img src="/mimi-blog/image/swap_ex1.jpg" srcset="/mimi-blog/img/loading.gif" lazyload alt="img"></p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入：head = [<span class="hljs-number">1,2,3,4</span>]<br>输出：[<span class="hljs-number">2,1,4,3</span>]<br></code></pre></td></tr></table></figure>
+<p><img src="/mimi-blog/image/1724130414-QbPAjl-image.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="img"></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入: head = [<span class="hljs-number">4,2,1,3</span>]<br>输出: [<span class="hljs-number">1,2,3,4</span>]<br></code></pre></td></tr></table></figure>
 
 <p><strong>示例 2：</strong></p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：head = <span class="hljs-comment">[]</span><br>输出：<span class="hljs-comment">[]</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：head = <span class="hljs-comment">[1]</span><br>输出：<span class="hljs-comment">[1]</span><br></code></pre></td></tr></table></figure>
+<p><img src="/mimi-blog/image/1724130432-zoOvdI-image.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="img"></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入: head = [-<span class="hljs-number">1,5,3,4</span>,<span class="hljs-number">0</span>]<br>输出: [-<span class="hljs-number">1,0,3,4</span>,<span class="hljs-number">5</span>]<br></code></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li>链表中节点的数目在范围 <code>[0, 100]</code> 内</li>
-<li><code>0 &lt;= Node.val &lt;= 100</code></li>
+<li>列表中的节点数在 <code>[1, 5000]</code>范围内</li>
+<li><code>-5000 &lt;= Node.val &lt;= 5000</code></li>
 </ul>
 <h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol>
-<li>使用递归的方式进行，递归解决链表问题的三要素：<ul>
-<li>拿到子规模的问题答案，这里的tn就是子问题的答案。</li>
-<li>最终子问题答案， 判空就是最终子问题答案。</li>
-<li>拿到答案后需要进行的操作，将两节点交换指向。</li>
-</ul>
-</li>
+<li>顺序遍历，如果发现 pre.val &gt; curr.val 就执行一下步骤：<ol>
+<li>如果需要插入在头节点的位置，则执行换头逻辑。</li>
+<li>从thead开始遍历，直至遇到左小右大的情况，插入其中即可。</li>
 </ol>
-<p><img src="/mimi-blog/image/image-20241031200537362.png" srcset="/mimi-blog/img/loading.gif" lazyload alt="image-20241031200537362"></p>
-<h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">swapPairs</span><span class="hljs-params">(ListNode head)</span> &#123;<br>        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.next == <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">tn</span> <span class="hljs-operator">=</span> swapPairs(head.next.next);<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">next</span> <span class="hljs-operator">=</span> head.next;<br>        head.next.next = head;<br>        head.next = tn;<br>        <span class="hljs-keyword">return</span> next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li>需要注意的是，当curr节点需要向前移动时，需要立即断开自身节点，pre.next &#x3D; curr.next。</li>
+</ol>
+<h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">insertionSortList</span><span class="hljs-params">(ListNode head)</span> &#123;<br>        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.next == <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">dummy</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(<span class="hljs-number">0</span>, head), thead = dummy;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">prev</span> <span class="hljs-operator">=</span> dummy.next, curr = prev.next;<br>        <span class="hljs-keyword">while</span> (curr != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">if</span> (prev.val &gt; curr.val) &#123;<br>                <span class="hljs-comment">// 立马断开 curr 独立节点</span><br>                prev.next = curr.next;<br>                <span class="hljs-keyword">if</span> (thead.val &gt; curr.val) &#123;<br>                  	<span class="hljs-comment">// if 没 while 耗时，所以这里使用if判断的头节点</span><br>                  	<span class="hljs-comment">// if 击败99%   while 击败 50%</span><br>                    dummy.next = curr;<br>                    curr.next = thead;<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    <span class="hljs-keyword">while</span> (thead.next.val &lt; curr.val) &#123;<br>                        thead = thead.next;<br>                    &#125;<br>                    <span class="hljs-type">ListNode</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> thead.next;<br>                    thead.next = curr;<br>                    curr.next = temp;<br>                &#125;<br>                thead = dummy.next;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                prev = prev.next;<br>            &#125;<br>            curr = prev.next;<br>        &#125;<br>        <span class="hljs-keyword">return</span> dummy.next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -380,7 +387,7 @@
       
         <a href="/mimi-blog/tags/leetcode/" class="print-no-link">#leetcode</a>
       
-        <a href="/mimi-blog/tags/Java/" class="print-no-link">#Java</a>
+        <a href="/mimi-blog/tags/%E6%8E%92%E5%BA%8F/" class="print-no-link">#排序</a>
       
     </div>
   
@@ -392,8 +399,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>24.两两交换链表中的节点</div>
-      <div>https://xiaomaoboss.github.io/mimi-blog/2024/10/31/24-两两交换链表中的节点/</div>
+      <div>147.对链表进行插入排序</div>
+      <div>https://xiaomaoboss.github.io/mimi-blog/2024/11/01/147-对链表进行插入排序/</div>
     </div>
     <div class="license-meta">
       
@@ -405,13 +412,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月31日</div>
+          <div>2024年11月1日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月31日</div>
+          <div>2024年11月1日</div>
         </div>
       
       
@@ -442,18 +449,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/mimi-blog/2024/10/31/92-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II/" title="92.反转链表II">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">92.反转链表II</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/mimi-blog/2024/10/21/EffectiveJava/" title="EffectiveJava">
-                        <span class="hidden-mobile">EffectiveJava</span>
+                      <a href="/mimi-blog/2024/11/01/143-%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/" title="143.重排链表">
+                        <span class="hidden-mobile">143.重排链表</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
