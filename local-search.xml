@@ -4,6 +4,90 @@
   
   
   <entry>
+    <title>237.删除链表中的节点</title>
+    <link href="/mimi-blog/2024/11/02/237-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/"/>
+    <url>/mimi-blog/2024/11/02/237-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="237-删除链表中的节点"><a href="#237-删除链表中的节点" class="headerlink" title="237. 删除链表中的节点"></a><a href="https://leetcode.cn/problems/delete-node-in-a-linked-list/">237. 删除链表中的节点</a></h1><p>有一个单链表的 <code>head</code>，我们想删除它其中的一个节点 <code>node</code>。</p><p>给你一个需要删除的节点 <code>node</code> 。你将 <strong>无法访问</strong> 第一个节点 <code>head</code>。</p><p>链表的所有值都是 <strong>唯一的</strong>，并且保证给定的节点 <code>node</code> 不是链表中的最后一个节点。</p><p>删除给定的节点。注意，删除节点并不是指从内存中删除它。这里的意思是：</p><ul><li>给定节点的值不应该存在于链表中。</li><li>链表中的节点数应该减少 1。</li><li><code>node</code> 前面的所有值顺序相同。</li><li><code>node</code> 后面的所有值顺序相同。</li></ul><p><strong>自定义测试：</strong></p><ul><li>对于输入，你应该提供整个链表 <code>head</code> 和要给出的节点 <code>node</code>。<code>node</code> 不应该是链表的最后一个节点，而应该是链表中的一个实际节点。</li><li>我们将构建链表，并将节点传递给你的函数。</li><li>输出将是调用你函数后的整个链表。</li></ul><p><strong>示例 1：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/09/01/node1.jpg" alt="img"></p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">输入：head = [<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">9</span>], <span class="hljs-keyword">node</span> <span class="hljs-title">= 5</span><br>输出：[<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">9</span>]<br>解释：指定链表中值为 <span class="hljs-number">5</span> 的第二个节点，那么在调用了你的函数之后，该链表应变为 <span class="hljs-number">4</span> -&gt; <span class="hljs-number">1</span> -&gt; <span class="hljs-number">9</span><br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><p><img src="https://assets.leetcode.com/uploads/2020/09/01/node2.jpg" alt="img"></p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">输入：head = [<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">9</span>], <span class="hljs-keyword">node</span> <span class="hljs-title">= 1</span><br>输出：[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">9</span>]<br>解释：指定链表中值为 <span class="hljs-number">1</span> 的第三个节点，那么在调用了你的函数之后，该链表应变为 <span class="hljs-number">4</span> -&gt; <span class="hljs-number">5</span> -&gt; <span class="hljs-number">9</span><br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>链表中节点的数目范围是 <code>[2, 1000]</code></li><li><code>-1000 &lt;= Node.val &lt;= 1000</code></li><li>链表中每个节点的值都是 <strong>唯一</strong> 的</li><li>需要删除的节点 <code>node</code> 是 <strong>链表中的节点</strong> ，且 <strong>不是末尾节点</strong></li></ul><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol><li>访问不到head节点，但题目又没说必须是节点删除，不可以是只复制val。</li><li>所以这道题只需要顺序node向下遍历即可，node.val  &#x3D; node.next.val，其中使用一个指针记录上一个节点，while循环结束后prev.next &#x3D; null即可。</li></ol><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode(int x) &#123; val = x; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">deleteNode</span><span class="hljs-params">(ListNode node)</span> &#123;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">prev</span> <span class="hljs-operator">=</span> node;<br>        <span class="hljs-keyword">while</span> (node.next != <span class="hljs-literal">null</span>) &#123;<br>            prev = node;<br>            node.val = node.next.val;<br>            node = node.next;<br>        &#125;<br>        prev.next = <span class="hljs-literal">null</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+      <tag>链表</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>876.链表的中间节点</title>
+    <link href="/mimi-blog/2024/11/02/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E8%8A%82%E7%82%B9/"/>
+    <url>/mimi-blog/2024/11/02/876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E8%8A%82%E7%82%B9/</url>
+    
+    <content type="html"><![CDATA[<h2 id="876-链表的中间结点"><a href="#876-链表的中间结点" class="headerlink" title="876. 链表的中间结点"></a><a href="https://leetcode.cn/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></h2><p>给你单链表的头结点 <code>head</code> ，请你找出并返回链表的中间结点。</p><p>如果有两个中间结点，则返回第二个中间结点。</p><p><strong>示例 1：</strong></p><p><img src="/mimi-blog/image/lc-midlist1.jpg" alt="img"></p><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：head = <span class="hljs-comment">[1,2,3,4,5]</span><br>输出：<span class="hljs-comment">[3,4,5]</span><br>解释：链表只有一个中间结点，值为 3 。<br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><p><img src="/mimi-blog/image/lc-midlist2.jpg" alt="img"></p><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：head = <span class="hljs-comment">[1,2,3,4,5,6]</span><br>输出：<span class="hljs-comment">[4,5,6]</span><br>解释：该链表有两个中间结点，值分别为 3 和 4 ，返回第二个结点。<br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>链表的结点数范围是 <code>[1, 100]</code></li><li><code>1 &lt;= Node.val &lt;= 100</code></li></ul><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol><li>快指针fast每次走2步，慢指针slow每次走1步，当fast走到末尾时slow正好走到中间。</li></ol><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">middleNode</span><span class="hljs-params">(ListNode head)</span> &#123;<br>        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.next == <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">slow</span> <span class="hljs-operator">=</span> head, fast = head.next.next;<br>        <span class="hljs-keyword">while</span> (fast != <span class="hljs-literal">null</span> &amp;&amp; fast.next != <span class="hljs-literal">null</span>) &#123;<br>            slow = slow.next;<br>            fast = fast.next.next;<br>        &#125;<br>        <span class="hljs-keyword">return</span> slow.next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+      <tag>链表</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>3226.使两个整数相等的位更改次数</title>
+    <link href="/mimi-blog/2024/11/02/3226-%E4%BD%BF%E4%B8%A4%E4%B8%AA%E6%95%B4%E6%95%B0%E7%9B%B8%E7%AD%89%E7%9A%84%E4%BD%8D%E6%9B%B4%E6%94%B9%E6%AC%A1%E6%95%B0/"/>
+    <url>/mimi-blog/2024/11/02/3226-%E4%BD%BF%E4%B8%A4%E4%B8%AA%E6%95%B4%E6%95%B0%E7%9B%B8%E7%AD%89%E7%9A%84%E4%BD%8D%E6%9B%B4%E6%94%B9%E6%AC%A1%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="3226-使两个整数相等的位更改次数"><a href="#3226-使两个整数相等的位更改次数" class="headerlink" title="3226. 使两个整数相等的位更改次数"></a><a href="https://leetcode.cn/problems/number-of-bit-changes-to-make-two-integers-equal/">3226. 使两个整数相等的位更改次数</a></h1><p>给你两个正整数 <code>n</code> 和 <code>k</code>。</p><p>你可以选择 <code>n</code> 的 <strong>二进制表示</strong> 中任意一个值为 1 的位，并将其改为 0。</p><p>返回使得 <code>n</code> 等于 <code>k</code> 所需要的更改次数。如果无法实现，返回 -1。</p><p><strong>示例 1：</strong></p><p><strong>输入：</strong> n &#x3D; 13, k &#x3D; 4</p><p><strong>输出：</strong> 2</p><p><strong>解释：</strong><br>最初，<code>n</code> 和 <code>k</code> 的二进制表示分别为 <code>n = (1101)2</code> 和 <code>k = (0100)2</code>，</p><p>我们可以改变 <code>n</code> 的第一位和第四位。结果整数为 <code>n = (**0**10**0**)2 = k</code>。</p><p><strong>示例 2：</strong></p><p><strong>输入：</strong> n &#x3D; 21, k &#x3D; 21</p><p><strong>输出：</strong> 0</p><p><strong>解释：</strong><br><code>n</code> 和 <code>k</code> 已经相等，因此不需要更改。</p><p><strong>示例 3：</strong></p><p><strong>输入：</strong> n &#x3D; 14, k &#x3D; 13</p><p><strong>输出：</strong> -1</p><p><strong>解释：</strong><br>无法使 <code>n</code> 等于 <code>k</code>。</p><p><strong>提示：</strong></p><ul><li><code>1 &lt;= n, k &lt;= 106</code></li></ul><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol><li>n &#x3D;&#x3D; k 则返回 0。</li><li>n &amp; k !&#x3D; k 时表示不能通过改变二进制n的bit位的值使得 change(n) &#x3D;&#x3D; k，所以返回-1。</li><li>取n和k的最低位比较即可，(n &amp; 1) &#x3D;&#x3D; 1 &amp;&amp; (k &amp; 1) &#x3D;&#x3D; 0 则表示改变n的当前bit位时可以趋近于k，所以count++。</li><li>使 n &gt;&gt;&#x3D; 1并且 k &gt;&gt;&#x3D; 1，n和k都要向右移动一个bit位。</li></ol><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">minChanges</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> k)</span> &#123;<br>        <span class="hljs-keyword">if</span> (n == k) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; <br>        <span class="hljs-keyword">if</span> ((n &amp; k) != k) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (n != <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">if</span> ((n &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span> &amp;&amp; (k &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">0</span>) &#123;<br>                count++;<br>            &#125;<br>            k &gt;&gt;= <span class="hljs-number">1</span>;<br>            n &gt;&gt;= <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> count;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+      <tag>位运算</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>148.排序链表</title>
+    <link href="/mimi-blog/2024/11/02/148-%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/"/>
+    <url>/mimi-blog/2024/11/02/148-%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="148-排序链表"><a href="#148-排序链表" class="headerlink" title="148. 排序链表"></a><a href="https://leetcode.cn/problems/sort-list/">148. 排序链表</a></h1><p>给你链表的头结点 <code>head</code> ，请将其按 <strong>升序</strong> 排列并返回 <strong>排序后的链表</strong> 。</p><p><strong>示例 1：</strong></p><p><img src="/mimi-blog/image/sort_list_1.jpg" alt="img"></p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入：head = [<span class="hljs-number">4,2,1,3</span>]<br>输出：[<span class="hljs-number">1,2,3,4</span>]<br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><p><img src="/mimi-blog/image/sort_list_2.jpg" alt="img"></p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入：head = [-<span class="hljs-number">1,5,3,4</span>,<span class="hljs-number">0</span>]<br>输出：[-<span class="hljs-number">1,0,3,4</span>,<span class="hljs-number">5</span>]<br></code></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：head = <span class="hljs-comment">[]</span><br>输出：<span class="hljs-comment">[]</span><br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>链表中节点的数目在范围 <code>[0, 5 * 104]</code> 内</li><li><code>-105 &lt;= Node.val &lt;= 105</code></li></ul><p><strong>进阶：</strong>你可以在 <code>O(n log n)</code> 时间复杂度和常数级空间复杂度下，对链表进行排序吗？</p><h2 id="solver"><a href="#solver" class="headerlink" title="solver"></a>solver</h2><ol><li>使用插入排序的时间复杂度为O(n²)，在用例11被卡住。</li><li>题目表示需要将时间复杂度控制在<code>O(n log n)</code>，所以使用了分治算法进行归并排序。</li><li>归并排序（分治）：<ul><li>将一个大的链表按照规则分为若干个小的链表，当不可再分时进行（治理），这也就是分治算法的核心。</li><li>题目中使用了二分法，每次都将链表一分为二，直至链表不可再分（left和right都为一个节点），此时两个链表都是各自有序的，所以这里只需要合并两个有序链表即可。</li></ul></li></ol><h2 id="Coder"><a href="#Coder" class="headerlink" title="Coder"></a>Coder</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">sortList</span><span class="hljs-params">(ListNode head)</span> &#123;<br>        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.next == <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">slow</span> <span class="hljs-operator">=</span> head, fast = head.next.next;<br>        <span class="hljs-keyword">while</span> (fast != <span class="hljs-literal">null</span> &amp;&amp; fast.next != <span class="hljs-literal">null</span>) &#123;<br>            slow = slow.next;<br>            fast = fast.next.next;<br>        &#125;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">rHead</span> <span class="hljs-operator">=</span> slow.next;<br>        slow.next = <span class="hljs-literal">null</span>;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> sortList(head);<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> sortList(rHead);<br>        <span class="hljs-keyword">return</span> mergeLinkedList(left, right);<br>    &#125;<br><br>    <span class="hljs-keyword">private</span> ListNode <span class="hljs-title function_">mergeLinkedList</span><span class="hljs-params">(ListNode left, ListNode right)</span> &#123;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">dummy</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(-<span class="hljs-number">1</span>);<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">node</span> <span class="hljs-operator">=</span> dummy;<br>        <span class="hljs-keyword">while</span> (left != <span class="hljs-literal">null</span> &amp;&amp; right != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">if</span> (left.val &lt; right.val) &#123;<br>                node.next = left;<br>                left = left.next;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                node.next = right;<br>                right = right.next;<br>            &#125;<br>            node = node.next;<br>        &#125;<br>        node.next = left == <span class="hljs-literal">null</span> ? right : left;<br>        <span class="hljs-keyword">return</span> dummy.next;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>leetcode</tag>
+      
+      <tag>链表</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>147.对链表进行插入排序</title>
     <link href="/mimi-blog/2024/11/01/147-%E5%AF%B9%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/"/>
     <url>/mimi-blog/2024/11/01/147-%E5%AF%B9%E9%93%BE%E8%A1%A8%E8%BF%9B%E8%A1%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
@@ -14,9 +98,9 @@
     
     <tags>
       
-      <tag>链表</tag>
-      
       <tag>leetcode</tag>
+      
+      <tag>链表</tag>
       
       <tag>排序</tag>
       
@@ -37,9 +121,9 @@
     
     <tags>
       
-      <tag>链表</tag>
-      
       <tag>leetcode</tag>
+      
+      <tag>链表</tag>
       
       <tag>推荐</tag>
       
@@ -60,9 +144,9 @@
     
     <tags>
       
-      <tag>链表</tag>
-      
       <tag>leetcode</tag>
+      
+      <tag>链表</tag>
       
     </tags>
     
@@ -81,9 +165,9 @@
     
     <tags>
       
-      <tag>链表</tag>
-      
       <tag>leetcode</tag>
+      
+      <tag>链表</tag>
       
       <tag>Java</tag>
       
@@ -106,9 +190,9 @@
     
     <tags>
       
-      <tag>链表</tag>
-      
       <tag>leetcode</tag>
+      
+      <tag>链表</tag>
       
       <tag>Java</tag>
       
@@ -131,9 +215,9 @@
     
     <tags>
       
-      <tag>链表</tag>
-      
       <tag>leetcode</tag>
+      
+      <tag>链表</tag>
       
       <tag>Java</tag>
       
@@ -244,11 +328,11 @@
       
       <tag>Java</tag>
       
+      <tag>知识库</tag>
+      
       <tag>Spring</tag>
       
       <tag>源码</tag>
-      
-      <tag>知识库</tag>
       
     </tags>
     
@@ -269,11 +353,11 @@
       
       <tag>Java</tag>
       
+      <tag>LeetCode</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
-      
-      <tag>LeetCode</tag>
       
       <tag>数组</tag>
       
@@ -298,11 +382,11 @@
       
       <tag>Java</tag>
       
+      <tag>LeetCode</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
-      
-      <tag>LeetCode</tag>
       
       <tag>数组</tag>
       
@@ -327,11 +411,11 @@
       
       <tag>Java</tag>
       
+      <tag>LeetCode</tag>
+      
       <tag>算法</tag>
       
       <tag>数据结构</tag>
-      
-      <tag>LeetCode</tag>
       
       <tag>双指针</tag>
       
